@@ -158,3 +158,25 @@ nav a{
 .foto:hover{
     transform:scale(1.05);
 }
+.whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+width:65px;
+height:65px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:34px;
+text-decoration:none;
+color:white;
+box-shadow:0 6px 18px rgba(0,0,0,.3);
+transition:.3s;
+z-index:9999;
+}
+
+.whatsapp:hover{
+transform:scale(1.15);
+}
