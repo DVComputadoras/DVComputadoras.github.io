@@ -1,408 +1,423 @@
-/* CONFIGURACIÓN GENERAL */
+/* =======================================================
+   SERVICIO TÉCNICO PC - ESTILOS VERSIÓN 4.0
+======================================================= */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-
-html {
-    scroll-behavior: smooth;
+html{
+    scroll-behavior:smooth;
 }
 
-
-body {
-    background: #f4f6f8;
-    color: #333;
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f5f7fb;
+    color:#333;
+    line-height:1.6;
 }
 
+/* CONTENEDOR */
+
+.contenedor{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
 
 /* ENCABEZADO */
 
-header {
-
-    background: #0b1f3a;
-    color: white;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 20px 8%;
-
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-
-}
-
-
-.logo h1 {
-
-    font-size: 28px;
-
-}
-
-
-.logo p {
-
-    font-size: 14px;
-    margin-top: 5px;
-
-}
-
-
-
-nav ul {
-
-    display: flex;
-    list-style: none;
-    gap: 25px;
-
-}
-
-
-nav a {
-
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-
-}
-
-
-nav a:hover {
-
-    color: #00a8ff;
-
-}
-
-
-
-/* SECCIÓN PRINCIPAL */
-
-.hero {
-
-    min-height: 80vh;
-
-    display: flex;
-    align-items: center;
-
-    padding: 0 8%;
-
-    background: #0b1f3a;
-
-}
-
-
-
-.hero-text {
-
-    max-width: 600px;
-    color:white;
-
-}
-
-
-.hero h2 {
-
-    font-size: 45px;
-    margin-bottom: 20px;
-    color: #ffffff;
-
-}
-
-
-.hero p {
-
-    font-size: 20px;
-    line-height: 1.6;
-    color: #ffffff;
-
-}
-
-
-
-.boton {
-
-    display: inline-block;
-
-    margin-top: 25px;
-
-    padding: 14px 30px;
-
-    background:#00a8ff;
-
-    color:white;
-
-    text-decoration:none;
-
-    border-radius:30px;
-
-    font-weight:bold;
-
-}
-
-
-.boton:hover {
-
-    background:#0077b6;
-
-}
-
-
-
-/* SECCIONES */
-
-section {
-
-    padding:70px 8%;
-
-}
-
-
-
-section h2 {
-
-    text-align:center;
-
-    font-size:35px;
-
-    margin-bottom:40px;
-
-    color:#0b1f3a;
-
-}
-
-
-
-/* SERVICIOS */
-
-
-.contenedor-servicios {
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-
-    gap:25px;
-
-}
-
-
-
-.tarjeta {
-
-    background:white;
-
-    padding:30px;
-
-    border-radius:15px;
-
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
-
-    transition:0.3s;
-
-}
-
-
-
-.tarjeta:hover {
-
-    transform:translateY(-8px);
-
-}
-
-
-
-.tarjeta h3 {
-
-    color:#0077b6;
-
-    margin-bottom:15px;
-
-}
-
-
-
-/* EXPERIENCIA */
-
-.experiencia-box {
-
-    background:white;
-
-    padding:40px;
-
-    text-align:center;
-
-    border-radius:15px;
-
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
-
-}
-
-
-.experiencia-box h3 {
-
-    font-size:28px;
-
-    color:#0077b6;
-
-    margin-bottom:20px;
-
-}
-
-
-
-
-/* GALERÍA */
-
-
-.galeria {
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-
-    gap:20px;
-
-}
-
-
-
-.imagen {
-
-    overflow:hidden;
-
-    border-radius:15px;
-
-}
-
-
-
-.imagen img {
-
-    width:100%;
-
-    height:220px;
-
-    object-fit:cover;
-
-    transition:0.4s;
-
-}
-
-
-
-.imagen img:hover {
-
-    transform:scale(1.1);
-
-}
-
-
-
-
-/* CONTACTO */
-
-
-#contacto {
-
+header{
     background:#0b1f3a;
+    position:sticky;
+    top:0;
+    z-index:999;
+    box-shadow:0 3px 15px rgba(0,0,0,.15);
+}
 
-    color:white;
+header .contenedor{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+}
 
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:#fff;
+}
+
+.logo i{
+    font-size:34px;
+    color:#00c2ff;
+}
+
+.logo h2{
+    color:#fff;
+    font-size:28px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:28px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#fff;
+    font-weight:600;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#00c2ff;
+}
+
+/* PORTADA */
+
+.hero{
+    min-height:90vh;
+
+    background:
+    linear-gradient(rgba(11,31,58,.82),rgba(11,31,58,.82)),
+    url("img/fondo-pc.jpeg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+}
+
+.hero-contenido{
+    width:90%;
+    max-width:800px;
+    margin:auto;
     text-align:center;
-
 }
 
-
-
-#contacto h2 {
-
-    color:white;
-
+.hero h1{
+    color:#fff;
+    font-size:54px;
+    font-weight:700;
+    margin-bottom:20px;
 }
 
+.hero p{
+    color:#fff;
+    font-size:22px;
+    margin-bottom:35px;
+}
 
+.boton-principal{
+    display:inline-block;
+    padding:16px 38px;
+    background:#00b4ff;
+    color:#fff;
+    text-decoration:none;
+    border-radius:40px;
+    font-weight:600;
+    transition:.3s;
+}
 
-.contacto-info {
+.boton-principal:hover{
+    background:#0096d6;
+    transform:translateY(-3px);
+}
+/* ==========================================
+   TÍTULOS DE LAS SECCIONES
+========================================== */
 
-    margin-top:25px;
+section{
+    padding:90px 0;
+}
 
+.titulo-seccion{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.titulo-seccion h2{
+    font-size:40px;
+    color:#0b1f3a;
+    margin-bottom:15px;
+}
+
+.titulo-seccion p{
+    max-width:750px;
+    margin:auto;
+    color:#666;
     font-size:18px;
-
-    line-height:2;
-
 }
 
+/* ==========================================
+   ESTADÍSTICAS
+========================================== */
 
+.estadisticas{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
 
-
-/* PIE DE PÁGINA */
-
-
-footer {
-
-    background:#061426;
-
-    color:white;
-
+.card-estadistica{
+    background:#fff;
+    border-radius:18px;
+    padding:35px;
     text-align:center;
-
-    padding:20px;
-
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.35s;
 }
 
+.card-estadistica:hover{
+    transform:translateY(-8px);
+}
 
+.card-estadistica i{
+    font-size:45px;
+    color:#00b4ff;
+    margin-bottom:20px;
+}
 
-/* ADAPTACIÓN PARA CELULARES */
+.card-estadistica h3{
+    font-size:42px;
+    color:#0b1f3a;
+}
 
+.card-estadistica p{
+    color:#666;
+}
+
+/* ==========================================
+   SERVICIOS
+========================================== */
+
+.contenedor-servicios{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.tarjeta-servicio{
+    background:#fff;
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.35s;
+}
+
+.tarjeta-servicio:hover{
+    transform:translateY(-10px);
+}
+
+.tarjeta-servicio i{
+    font-size:50px;
+    color:#00b4ff;
+    margin-bottom:20px;
+}
+
+.tarjeta-servicio h3{
+    margin-bottom:15px;
+    color:#0b1f3a;
+}
+
+.tarjeta-servicio p{
+    color:#666;
+}
+
+/* ==========================================
+   BENEFICIOS
+========================================== */
+
+.contenedor-beneficios{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.beneficio{
+    background:#fff;
+    border-left:5px solid #00b4ff;
+    border-radius:15px;
+    padding:30px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:.35s;
+}
+
+.beneficio:hover{
+    transform:translateY(-8px);
+}
+
+.beneficio i{
+    font-size:40px;
+    color:#00b4ff;
+    margin-bottom:18px;
+}
+
+.beneficio h3{
+    color:#0b1f3a;
+    margin-bottom:12px;
+}
+
+.beneficio p{
+    color:#666;
+}
+/* ==========================
+   GALERÍA
+========================== */
+
+.galeria-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+}
+
+.galeria-grid img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    border-radius:18px;
+    box-shadow:0 8px 25px rgba(0,0,0,.15);
+    transition:.4s;
+}
+
+.galeria-grid img:hover{
+    transform:scale(1.05);
+}
+
+/* ==========================
+   TESTIMONIOS
+========================== */
+
+.contenedor-testimonios{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:25px;
+}
+
+.testimonio{
+    background:#fff;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.testimonio h4{
+    margin-top:18px;
+    color:#0b1f3a;
+}
+
+/* ==========================
+   CONTACTO
+========================== */
+
+#contacto{
+    background:#0b1f3a;
+    color:#fff;
+}
+
+#contacto .titulo-seccion h2,
+#contacto .titulo-seccion p{
+    color:#fff;
+}
+
+.contacto-box{
+    max-width:600px;
+    margin:0 auto;
+    text-align:center;
+}
+
+.contacto-box h2{
+    font-size:38px;
+    margin:15px 0;
+}
+
+.boton-whatsapp{
+    display:inline-block;
+    margin-top:20px;
+    padding:16px 35px;
+    background:#25D366;
+    color:#fff;
+    text-decoration:none;
+    border-radius:40px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.boton-whatsapp:hover{
+    transform:translateY(-3px);
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+    background:#071423;
+    color:#fff;
+    text-align:center;
+    padding:35px 20px;
+}
+
+/* ==========================
+   WHATSAPP FLOTANTE
+========================== */
+
+.whatsapp-flotante{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:60px;
+    height:60px;
+    background:#25D366;
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:32px;
+    text-decoration:none;
+    box-shadow:0 6px 20px rgba(0,0,0,.25);
+    z-index:999;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
 
 @media(max-width:768px){
 
-
-header {
-
+header .contenedor{
     flex-direction:column;
-
+    gap:18px;
 }
 
-
-nav ul {
-
-    margin-top:20px;
-
+nav ul{
     flex-direction:column;
-
     text-align:center;
-
+    gap:15px;
 }
 
-
-
-.hero h2 {
-
-    font-size:32px;
-
+.hero h1{
+    font-size:36px;
 }
 
-
-
-.hero p {
-
-    font-size:17px;
-
+.hero p{
+    font-size:18px;
 }
 
-
-section {
-
-    padding:50px 5%;
-
+.titulo-seccion h2{
+    font-size:30px;
 }
 
+.contacto-box h2{
+    font-size:30px;
+}
 
 }
