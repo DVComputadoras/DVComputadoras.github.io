@@ -1,28 +1,182 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Servicio Técnico Especializado en Computadoras | Mantenimiento y Reparación</title>
+<title>Servicio Técnico PC | Reparación y Mantenimiento</title>
 
-<meta name="description" content="Servicio técnico especializado en mantenimiento preventivo, correctivo, limpieza, optimización y reparación de computadoras y laptops. Más de 15 años de experiencia.">
+<meta name="description" content="Servicio Técnico PC especializado en mantenimiento, reparación y soporte informático. Más de 15 años de experiencia.">
 
-<meta name="keywords" content="reparación de computadoras, mantenimiento de computadoras, servicio técnico, laptops, limpieza de computadoras, instalación de Windows">
+<style>
 
-<meta name="author" content="Servicio Técnico PC">
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
 
-<link rel="stylesheet" href="style.css">
+body{
+    background:#f4f8fc;
+    color:#333;
+}
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+html{
+    scroll-behavior:smooth;
+}
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+a{
+    text-decoration:none;
+    color:inherit;
+}
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+/* CABECERA */
+
+header{
+    width:100%;
+    background:#0755a5;
+    color:white;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+    box-shadow:0 3px 10px rgba(0,0,0,0.2);
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 20px;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:#5fd3ff;
+}
+
+.menu{
+    display:flex;
+    gap:25px;
+}
+
+.menu a{
+    color:white;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.menu a:hover{
+    color:#5fd3ff;
+}
+
+.btn-whatsapp{
+    background:#25d366;
+    padding:10px 18px;
+    border-radius:25px;
+    color:white;
+    font-weight:bold;
+}
+
+
+/* SECCIONES */
+
+section{
+    padding:90px 20px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+
+/* BOTONES */
+
+.btn{
+    display:inline-block;
+    background:#0755a5;
+    color:white;
+    padding:14px 25px;
+    border-radius:30px;
+    font-weight:bold;
+    margin-top:20px;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#043b75;
+}
+
+
+/* TITULOS */
+
+.titulo{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.titulo h2{
+    color:#0755a5;
+    font-size:32px;
+}
+
+.titulo p{
+    margin-top:10px;
+    color:#666;
+}
+
+
+/* WHATSAPP FLOTANTE */
+
+.whatsapp-float{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    background:#25d366;
+    color:white;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    z-index:999;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+
+
+/* ADAPTACIÓN CELULAR */
+
+@media(max-width:768px){
+
+.menu{
+    display:none;
+}
+
+.logo{
+    font-size:20px;
+}
+
+.navbar{
+    padding:15px;
+}
+
+section{
+    padding:70px 15px;
+}
+
+}
+
+</style>
 
 </head>
 
@@ -30,309 +184,1326 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
 <header>
 
-<div class="contenedor">
+<nav class="navbar">
 
 <div class="logo">
-
-<i class="fa-solid fa-computer"></i>
-
-<h2>Servicio Técnico PC</h2>
-
+Servicio Técnico <span>PC</span>
 </div>
 
-<nav>
+<div class="menu">
+<a href="#inicio">Inicio</a>
+<a href="#servicios">Servicios</a>
+<a href="#nosotros">Nosotros</a>
+<a href="#contacto">Contacto</a>
+</div>
 
-<ul>
-
-<li><a href="#inicio">Inicio</a></li>
-
-<li><a href="#nosotros">Nosotros</a></li>
-
-<li><a href="#servicios">Servicios</a></li>
-
-<li><a href="#galeria">Galería</a></li>
-
-<li><a href="#contacto">Contacto</a></li>
-
-</ul>
+<a class="btn-whatsapp" href="https://wa.me/593987586172">
+WhatsApp
+</a>
 
 </nav>
 
-</div>
-
 </header>
+<!-- SECCIÓN INICIO -->
 
-<section id="inicio" class="hero">
+<section id="inicio">
 
-<div class="hero-contenido">
+<div class="container">
 
-<h1>
-Mantenimiento Profesional para Computadoras y Laptops
+<div style="
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:40px;
+flex-wrap:wrap;
+">
+
+<div style="flex:1; min-width:300px;">
+
+<h1 style="
+font-size:42px;
+color:#0755a5;
+margin-bottom:20px;
+">
+Servicio Técnico PC
 </h1>
 
-<p>
+<h2 style="
+font-size:28px;
+color:#333;
+margin-bottom:20px;
+">
+Soluciones profesionales para tus equipos informáticos
+</h2>
 
-Recupera el rendimiento de tu equipo con un servicio técnico confiable, diagnóstico preciso y atención personalizada.
+
+<p style="
+font-size:18px;
+line-height:1.6;
+color:#555;
+">
+
+Más de <b>15 años de experiencia</b> brindando mantenimiento,
+reparación y soporte técnico para computadoras de hogares y empresas.
 
 </p>
 
-<a href="#contacto" class="boton-principal">
 
-Solicitar Servicio
+<a class="btn" href="https://wa.me/593987586172">
+
+Solicitar servicio
 
 </a>
 
 </div>
 
+
+<div style="
+flex:1;
+min-width:300px;
+text-align:center;
+">
+
+<img src="https://images.unsplash.com/photo-1581091870622-3c9a3b9e4c0f"
+alt="Servicio técnico de computadoras"
+style="
+width:100%;
+max-width:500px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.2);
+">
+
+</div>
+
+
+</div>
+
+</div>
+
 </section>
+
+
+<!-- FIN SECCIÓN INICIO -->
+<!-- SECCIÓN NOSOTROS -->
+
 <section id="nosotros">
 
-    <div class="contenedor">
+<div class="container">
 
-        <div class="titulo-seccion">
-            <h2>¿Quiénes Somos?</h2>
-            <p>
-                Somos especialistas en mantenimiento, reparación y optimización de computadoras y laptops,
-                brindando soluciones confiables con atención personalizada.
-            </p>
-        </div>
 
-        <div class="estadisticas">
+<div class="titulo">
 
-            <div class="card-estadistica">
-                <i class="fa-solid fa-award"></i>
-                <h3>15+</h3>
-                <p>Años de experiencia</p>
-            </div>
+<h2>
+Quiénes somos
+</h2>
 
-            <div class="card-estadistica">
-                <i class="fa-solid fa-desktop"></i>
-                <h3>500+</h3>
-                <p>Equipos con mantenimiento realizado</p>
-            </div>
+<p>
+Experiencia, confianza y soluciones informáticas profesionales
+</p>
 
-            <div class="card-estadistica">
-                <i class="fa-solid fa-users"></i>
-                <h3>100%</h3>
-                <p>Atención a clientes particulares</p>
-            </div>
+</div>
 
-        </div>
 
-    </div>
+
+<div style="
+display:flex;
+gap:30px;
+flex-wrap:wrap;
+align-items:center;
+">
+
+
+<div style="
+flex:1;
+min-width:300px;
+">
+
+
+<h3 style="
+color:#0755a5;
+font-size:25px;
+margin-bottom:15px;
+">
+
+Servicio Técnico PC
+
+</h3>
+
+
+<p style="
+font-size:17px;
+line-height:1.8;
+color:#555;
+">
+
+Somos un servicio técnico especializado en reparación,
+mantenimiento y optimización de computadoras.
+
+</p>
+
+
+<p style="
+font-size:17px;
+line-height:1.8;
+color:#555;
+margin-top:15px;
+">
+
+Contamos con más de <b>15 años de experiencia</b>
+ayudando a clientes particulares y empresas a mantener
+sus equipos funcionando de manera eficiente.
+
+</p>
+
+
+<p style="
+font-size:17px;
+line-height:1.8;
+color:#555;
+margin-top:15px;
+">
+
+Nuestro compromiso es ofrecer un diagnóstico profesional,
+trabajo responsable y soluciones adaptadas a cada necesidad.
+
+</p>
+
+
+</div>
+
+
+
+<div style="
+flex:1;
+min-width:300px;
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,.1);
+">
+
+
+<h3 style="
+color:#0755a5;
+margin-bottom:20px;
+">
+
+¿Por qué elegirnos?
+
+</h3>
+
+
+<ul style="
+line-height:2;
+font-size:17px;
+color:#555;
+">
+
+<li>✓ Más de 15 años de experiencia</li>
+
+<li>✓ Atención personalizada</li>
+
+<li>✓ Diagnóstico técnico profesional</li>
+
+<li>✓ Mantenimiento preventivo y correctivo</li>
+
+<li>✓ Soporte para hogares y empresas</li>
+
+</ul>
+
+
+</div>
+
+
+</div>
+
+
+</div>
 
 </section>
+
+
+<!-- FIN SECCIÓN NOSOTROS -->
+<!-- SECCIÓN SERVICIOS -->
 
 <section id="servicios">
 
-    <div class="contenedor">
+<div class="container">
 
-        <div class="titulo-seccion">
-            <h2>Nuestros Servicios</h2>
-            <p>
-                Ofrecemos soluciones completas para mantener tu computadora funcionando de forma rápida, segura y eficiente.
-            </p>
-        </div>
 
-        <div class="contenedor-servicios">
+<div class="titulo">
 
-            <div class="tarjeta-servicio">
-                <i class="fa-solid fa-screwdriver-wrench"></i>
-                <h3>Mantenimiento Preventivo</h3>
-                <p>
-                    Limpieza interna, cambio de pasta térmica, revisión de componentes y optimización general.
-                </p>
-            </div>
-
-            <div class="tarjeta-servicio">
-                <i class="fa-solid fa-laptop-medical"></i>
-                <h3>Reparación de Equipos</h3>
-                <p>
-                    Solución de fallas de hardware, software, lentitud, errores de arranque y sobrecalentamiento.
-                </p>
-            </div>
-
-            <div class="tarjeta-servicio">
-                <i class="fa-brands fa-windows"></i>
-                <h3>Instalación de Sistemas</h3>
-                <p>
-                    Instalación y configuración de Windows, controladores, programas y respaldo de información.
-                </p>
-            </div>
-
-            <div class="tarjeta-servicio">
-                <i class="fa-solid fa-microchip"></i>
-                <h3>Actualización de Hardware</h3>
-                <p>
-                    Instalación de SSD, ampliación de memoria RAM y mejoras de rendimiento.
-                </p>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-<section id="porque">
-
-    <div class="contenedor">
-
-        <div class="titulo-seccion">
-            <h2>¿Por qué elegirnos?</h2>
-            <p>
-                Nos enfocamos en brindar un servicio técnico de calidad, con diagnósticos precisos y soluciones duraderas para que tu computadora vuelva a funcionar al máximo rendimiento.
-            </p>
-        </div>
-
-        <div class="contenedor-beneficios">
-
-            <div class="beneficio">
-                <i class="fa-solid fa-user-check"></i>
-                <h3>Atención Personalizada</h3>
-                <p>Cada equipo recibe un diagnóstico detallado y una solución adaptada a sus necesidades.</p>
-            </div>
-
-            <div class="beneficio">
-                <i class="fa-solid fa-shield-halved"></i>
-                <h3>Trabajo Confiable</h3>
-                <p>Realizamos cada mantenimiento con responsabilidad, cuidando la información y los componentes del equipo.</p>
-            </div>
-
-            <div class="beneficio">
-                <i class="fa-solid fa-bolt"></i>
-                <h3>Mayor Rendimiento</h3>
-                <p>Optimizamos el sistema para mejorar la velocidad, estabilidad y vida útil de la computadora.</p>
-            </div>
-
-            <div class="beneficio">
-                <i class="fa-solid fa-headset"></i>
-                <h3>Soporte Técnico</h3>
-                <p>Brindamos asesoría y soporte para resolver dudas antes y después del servicio.</p>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<section id="galeria">
-
-    <div class="contenedor">
-
-        <div class="titulo-seccion">
-            <h2>Galería de Trabajos</h2>
-            <p>
-                Algunos ejemplos de mantenimientos, limpiezas y reparaciones realizadas.
-            </p>
-        </div>
-
-        <div class="galeria-grid">
-
-            <img src="img/mantenimiento.jpeg" alt="Mantenimiento de computadora">
-
-            <img src="img/limpieza.jpeg" alt="Limpieza interna">
-
-            <img src="img/reparacion.jpeg" alt="Reparación de computadora">
-
-            <img src="img/optimizacion.jpeg" alt="Optimización de equipos">
-
-        </div>
-
-    </div>
-
-</section>
-<section id="testimonios">
-
-    <div class="contenedor">
-
-        <div class="titulo-seccion">
-            <h2>Lo que dicen nuestros clientes</h2>
-        </div>
-
-        <div class="contenedor-testimonios">
-
-            <div class="testimonio">
-                <p>
-                    "Excelente servicio. Mi computadora quedó mucho más rápida y el mantenimiento fue muy profesional."
-                </p>
-                <h4>Cliente Particular</h4>
-            </div>
-
-            <div class="testimonio">
-                <p>
-                    "Muy buena atención, explicaron claramente la falla y la reparación quedó perfecta."
-                </p>
-                <h4>Cliente Particular</h4>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<section id="contacto">
-
-    <div class="contenedor">
-
-        <div class="titulo-seccion">
-            <h2>Contáctanos</h2>
-
-            <p>
-                ¿Tu computadora está lenta, presenta fallas o necesita mantenimiento?
-                Escríbenos por WhatsApp y con gusto te atenderemos.
-            </p>
-
-        </div>
-
-        <div class="contacto-box">
-
-            <h3>📱 WhatsApp</h3>
-
-            <h2>0987586172</h2>
-
-            <a class="boton-whatsapp"
-               href="https://wa.me/593987586172"
-               target="_blank">
-
-               Enviar mensaje por WhatsApp
-
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-<footer>
-
-<div class="contenedor">
-
-<h3>Servicio Técnico PC</h3>
+<h2>
+Nuestros Servicios
+</h2>
 
 <p>
-Más de 15 años ofreciendo mantenimiento, reparación y optimización de computadoras y laptops.
-</p>
-
-<p>
-© 2026 Todos los derechos reservados.
+Soluciones completas para mantener tus equipos en óptimas condiciones
 </p>
 
 </div>
 
-</footer>
 
-<a href="https://wa.me/593987586172"
-class="whatsapp-flotante"
-target="_blank">
 
-<i class="fa-brands fa-whatsapp"></i>
+<div style="
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+">
+
+
+
+<div style="
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+">
+
+<h3 style="color:#0755a5;">
+🖥️ Mantenimiento de Computadoras
+</h3>
+
+<p style="
+margin-top:15px;
+line-height:1.6;
+color:#555;
+">
+
+Limpieza interna, cambio de pasta térmica,
+optimización del sistema y revisión completa
+del equipo.
+
+</p>
+
+</div>
+
+
+
+
+<div style="
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+">
+
+<h3 style="color:#0755a5;">
+🔧 Reparación de Equipos
+</h3>
+
+<p style="
+margin-top:15px;
+line-height:1.6;
+color:#555;
+">
+
+Diagnóstico y reparación de computadoras,
+laptops, fallas de hardware y problemas
+de funcionamiento.
+
+</p>
+
+</div>
+
+
+
+
+<div style="
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+">
+
+<h3 style="color:#0755a5;">
+💻 Instalación de Sistemas
+</h3>
+
+<p style="
+margin-top:15px;
+line-height:1.6;
+color:#555;
+">
+
+Instalación y configuración de Windows,
+Linux, programas, controladores y respaldo
+de información.
+
+</p>
+
+</div>
+
+
+
+
+<div style="
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+">
+
+<h3 style="color:#0755a5;">
+🚀 Optimización de PC
+</h3>
+
+<p style="
+margin-top:15px;
+line-height:1.6;
+color:#555;
+">
+
+Mejoramos la velocidad del equipo,
+eliminamos archivos innecesarios y
+aumentamos su rendimiento.
+
+</p>
+
+</div>
+
+
+
+
+<div style="
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+">
+
+<h3 style="color:#0755a5;">
+💾 Recuperación de Información
+</h3>
+
+<p style="
+margin-top:15px;
+line-height:1.6;
+color:#555;
+">
+
+Recuperación de archivos y diagnóstico
+de unidades de almacenamiento con fallas.
+
+</p>
+
+</div>
+
+
+
+
+<div style="
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+">
+
+<h3 style="color:#0755a5;">
+🏢 Soporte a Empresas
+</h3>
+
+<p style="
+margin-top:15px;
+line-height:1.6;
+color:#555;
+">
+
+Mantenimiento preventivo para oficinas,
+equipos empresariales y soporte técnico.
+
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- FIN SECCIÓN SERVICIOS -->
+<!-- SECCIÓN VENTAJAS -->
+
+<section>
+
+<div class="container">
+
+
+<div class="titulo">
+
+<h2>
+¿Por qué elegir Servicio Técnico PC?
+</h2>
+
+<p>
+Un servicio profesional pensado para cuidar tus equipos
+</p>
+
+</div>
+
+
+
+<div style="
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+">
+
+
+
+<div style="
+background:#0755a5;
+color:white;
+padding:30px;
+border-radius:15px;
+text-align:center;
+">
+
+<h3 style="
+font-size:38px;
+">
+15+
+</h3>
+
+<p>
+Años de experiencia
+</p>
+
+</div>
+
+
+
+
+<div style="
+background:white;
+padding:30px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+">
+
+<h3 style="
+font-size:38px;
+color:#0755a5;
+">
+500+
+</h3>
+
+<p>
+Equipos atendidos
+</p>
+
+</div>
+
+
+
+
+<div style="
+background:white;
+padding:30px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+">
+
+<h3 style="
+font-size:38px;
+color:#0755a5;
+">
+100%
+</h3>
+
+<p>
+Compromiso con el cliente
+</p>
+
+</div>
+
+
+
+
+<div style="
+background:white;
+padding:30px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+">
+
+<h3 style="
+font-size:38px;
+color:#0755a5;
+">
+✓
+</h3>
+
+<p>
+Diagnóstico profesional
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- FIN SECCIÓN VENTAJAS -->
+<!-- SECCIÓN GALERÍA -->
+
+<section>
+
+<div class="container">
+
+
+<div class="titulo">
+
+<h2>
+Galería de trabajos
+</h2>
+
+<p>
+Algunos ejemplos de nuestros servicios técnicos realizados
+</p>
+
+</div>
+
+
+
+<div style="
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+">
+
+
+
+<div>
+<img src="https://images.unsplash.com/photo-1597872200969-2b65d56bd16b"
+alt="Mantenimiento de computadora"
+style="
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.2);
+">
+</div>
+
+
+
+
+<div>
+<img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7"
+alt="Reparación de computadora"
+style="
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.2);
+">
+</div>
+
+
+
+
+<div>
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475"
+alt="Componentes electrónicos"
+style="
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.2);
+">
+</div>
+
+
+
+
+<div>
+<img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5"
+alt="Computadora de escritorio"
+style="
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.2);
+">
+</div>
+
+
+
+</div>
+
+
+
+<div style="
+text-align:center;
+margin-top:35px;
+">
+
+<p style="
+font-size:18px;
+color:#555;
+">
+
+📸 Próximamente más trabajos realizados por nuestro equipo técnico.
+
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- FIN SECCIÓN GALERÍA -->
+<!-- SECCIÓN PROCESO DE TRABAJO -->
+
+<section>
+
+<div class="container">
+
+
+<div class="titulo">
+
+<h2>
+Nuestro proceso de trabajo
+</h2>
+
+<p>
+Una atención organizada para entregar soluciones eficientes
+</p>
+
+</div>
+
+
+
+<div style="
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:25px;
+">
+
+
+
+<div style="
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+text-align:center;
+">
+
+
+<div style="
+font-size:45px;
+color:#0755a5;
+">
+
+1
+
+</div>
+
+
+<h3 style="
+margin:15px 0;
+color:#0755a5;
+">
+
+Contacto
+
+</h3>
+
+
+<p style="
+color:#555;
+line-height:1.6;
+">
+
+El cliente se comunica por WhatsApp
+para explicar el problema del equipo.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div style="
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+text-align:center;
+">
+
+
+<div style="
+font-size:45px;
+color:#0755a5;
+">
+
+2
+
+</div>
+
+
+<h3 style="
+margin:15px 0;
+color:#0755a5;
+">
+
+Diagnóstico
+
+</h3>
+
+
+<p style="
+color:#555;
+line-height:1.6;
+">
+
+Revisamos el equipo para encontrar
+la causa real de la falla.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div style="
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+text-align:center;
+">
+
+
+<div style="
+font-size:45px;
+color:#0755a5;
+">
+
+3
+
+</div>
+
+
+<h3 style="
+margin:15px 0;
+color:#0755a5;
+">
+
+Reparación
+
+</h3>
+
+
+<p style="
+color:#555;
+line-height:1.6;
+">
+
+Aplicamos la solución adecuada utilizando
+procedimientos técnicos profesionales.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div style="
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+text-align:center;
+">
+
+
+<div style="
+font-size:45px;
+color:#0755a5;
+">
+
+4
+
+</div>
+
+
+<h3 style="
+margin:15px 0;
+color:#0755a5;
+">
+
+Entrega
+
+</h3>
+
+
+<p style="
+color:#555;
+line-height:1.6;
+">
+
+Entregamos el equipo funcionando y con
+recomendaciones para su cuidado.
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- FIN SECCIÓN PROCESO -->
+<!-- SECCIÓN TESTIMONIOS -->
+
+<section>
+
+<div class="container">
+
+
+<div class="titulo">
+
+<h2>
+Opiniones de nuestros clientes
+</h2>
+
+<p>
+La satisfacción de nuestros clientes es nuestra mejor recomendación
+</p>
+
+</div>
+
+
+
+
+<div style="
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+">
+
+
+
+
+
+<div style="
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+">
+
+
+<p style="
+font-size:18px;
+line-height:1.6;
+color:#555;
+font-style:italic;
+">
+
+"Excelente servicio, mi computadora quedó
+mucho más rápida. Recomendado por su
+responsabilidad y profesionalismo."
+
+</p>
+
+
+<h3 style="
+margin-top:20px;
+color:#0755a5;
+">
+
+★★★★★
+
+</h3>
+
+
+<p>
+Cliente particular
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div style="
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+">
+
+
+<p style="
+font-size:18px;
+line-height:1.6;
+color:#555;
+font-style:italic;
+">
+
+"Buen diagnóstico y solución rápida.
+Siempre explican claramente el problema
+del equipo."
+
+</p>
+
+
+<h3 style="
+margin-top:20px;
+color:#0755a5;
+">
+
+★★★★★
+
+</h3>
+
+
+<p>
+Cliente empresarial
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div style="
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+">
+
+
+<p style="
+font-size:18px;
+line-height:1.6;
+color:#555;
+font-style:italic;
+">
+
+"Servicio confiable, atención personalizada
+y excelente trabajo de mantenimiento."
+
+</p>
+
+
+<h3 style="
+margin-top:20px;
+color:#0755a5;
+">
+
+★★★★★
+
+</h3>
+
+
+<p>
+Cliente particular
+</p>
+
+
+</div>
+
+
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- FIN SECCIÓN TESTIMONIOS -->
+<!-- SECCIÓN CONTACTO -->
+
+<section id="contacto">
+
+<div class="container">
+
+
+<div class="titulo">
+
+<h2>
+Contáctanos
+</h2>
+
+<p>
+Estamos listos para ayudarte con tus equipos informáticos
+</p>
+
+</div>
+
+
+
+
+<div style="
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+">
+
+
+
+
+
+<div style="
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+">
+
+
+<h3 style="
+color:#0755a5;
+margin-bottom:20px;
+">
+
+Servicio Técnico PC
+
+</h3>
+
+
+<p style="
+line-height:2;
+color:#555;
+">
+
+📱 WhatsApp: <b>0987586172</b>
+
+<br>
+
+🖥️ Mantenimiento y reparación de computadoras
+
+<br>
+
+🔧 Diagnóstico técnico profesional
+
+<br>
+
+⏰ Atención personalizada
+
+</p>
+
+
+
+<a class="btn" href="https://wa.me/593987586172">
+
+Escribir por WhatsApp
 
 </a>
 
-<script src="script.js"></script>
+
+</div>
+
+
+
+
+
+
+
+<div style="
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+">
+
+
+<h3 style="
+color:#0755a5;
+margin-bottom:20px;
+">
+
+Solicita información
+
+</h3>
+
+
+<form>
+
+
+<input type="text" placeholder="Nombre"
+style="
+width:100%;
+padding:12px;
+margin-bottom:15px;
+border:1px solid #ccc;
+border-radius:8px;
+">
+
+
+<input type="tel" placeholder="Teléfono"
+style="
+width:100%;
+padding:12px;
+margin-bottom:15px;
+border:1px solid #ccc;
+border-radius:8px;
+">
+
+
+<textarea placeholder="Describe el problema de tu equipo"
+style="
+width:100%;
+height:120px;
+padding:12px;
+border:1px solid #ccc;
+border-radius:8px;
+">
+
+</textarea>
+
+
+
+<button class="btn" type="submit"
+style="
+border:none;
+cursor:pointer;
+">
+
+Enviar consulta
+
+</button>
+
+
+</form>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- FIN SECCIÓN CONTACTO -->
+<!-- PIE DE PÁGINA -->
+
+<footer style="
+background:#0755a5;
+color:white;
+padding:35px 20px;
+text-align:center;
+">
+
+
+<div class="container">
+
+
+<h2>
+Servicio Técnico PC
+</h2>
+
+
+<p style="
+margin-top:15px;
+line-height:1.8;
+">
+
+Mantenimiento, reparación y soporte técnico
+para computadoras.
+
+</p>
+
+
+<p style="
+margin-top:15px;
+">
+
+📱 WhatsApp: 0987586172
+
+</p>
+
+
+<p style="
+margin-top:20px;
+font-size:14px;
+opacity:.8;
+">
+
+© 2026 Servicio Técnico PC.
+Todos los derechos reservados.
+
+</p>
+
+
+</div>
+
+
+</footer>
+
+
+
+<!-- BOTÓN WHATSAPP FLOTANTE -->
+
+
+<a class="whatsapp-float"
+href="https://wa.me/593987586172"
+target="_blank">
+
+💬
+
+</a>
+
+
 
 </body>
 
