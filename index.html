@@ -10,7 +10,83 @@
 
 <meta name="description" content="Servicio técnico especializado en reparación, mantenimiento y optimización de computadoras.">
 
+/* ANIMACIONES PROFESIONALES */
 
+
+.card{
+
+transition:0.3s ease;
+
+}
+
+
+
+.card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 10px 25px rgba(0,0,0,0.20);
+
+}
+
+
+
+/* IMAGENES DE GALERIA */
+
+
+.card img{
+
+transition:0.3s ease;
+
+}
+
+
+
+.card img:hover{
+
+transform:scale(1.03);
+
+}
+
+
+
+/* MEJOR ESPACIADO EN CELULARES */
+
+
+@media(max-width:600px){
+
+
+section{
+
+padding:30px 0;
+
+}
+
+
+h2{
+
+font-size:25px;
+
+}
+
+
+.card{
+
+padding:20px;
+
+}
+
+
+.btn{
+
+font-size:15px;
+
+padding:12px 20px;
+
+}
+
+
+}
 <style>
 
 *{
@@ -133,15 +209,37 @@ margin:8px;
 
 <header>
 
-<h1>Servicio Técnico PC</h1>
+
+<div style="font-size:50px;">
+💻
+</div>
+
+
+<h1>
+Servicio Técnico PC
+</h1>
+
 
 <p>
 Reparación • Mantenimiento • Optimización • Soporte Informático
 </p>
 
 
+<p style="
+margin-top:15px;
+font-size:17px;
+">
+
+Más de 15 años brindando soluciones
+a computadoras y laptops.
+
+</p>
+
+
 <a class="btn" href="https://wa.me/593987586172">
-WhatsApp 0987586172
+
+📲 Solicitar Diagnóstico
+
 </a>
 
 
@@ -225,6 +323,158 @@ para cada cliente.
 
 
 </div>
+
+
+</div>
+
+</div>
+
+</section>
+<section id="marcas">
+
+<div class="container">
+
+<h2>Equipos y Marcas que Atendemos</h2>
+
+
+<div class="grid">
+
+
+<div class="card" style="text-align:center;">
+
+<h3 style="color:#004aad;">
+💻 Laptops
+</h3>
+
+<p>
+Mantenimiento, reparación y optimización
+de equipos portátiles.
+</p>
+
+</div>
+
+
+
+<div class="card" style="text-align:center;">
+
+<h3 style="color:#004aad;">
+🖥️ Computadoras de Escritorio
+</h3>
+
+<p>
+Diagnóstico y reparación de PCs
+para hogares y oficinas.
+</p>
+
+</div>
+
+
+
+<div class="card" style="text-align:center;">
+
+<h3 style="color:#004aad;">
+🏢 Equipos Todo en Uno
+</h3>
+
+<p>
+Servicio técnico para equipos All in One.
+</p>
+
+</div>
+
+
+</div>
+
+
+
+<div class="card" style="margin-top:25px; text-align:center;">
+
+<h3 style="color:#004aad;">
+Marcas atendidas
+</h3>
+
+
+<p style="font-size:20px; margin-top:15px;">
+
+HP • Dell • Lenovo • Acer • Asus • Toshiba • Samsung
+
+</p>
+
+
+</div>
+
+
+</div>
+
+</section>
+<section id="porque">
+
+<div class="container">
+
+<h2>¿Por qué elegirnos?</h2>
+
+
+<div class="grid">
+
+
+<div class="card">
+
+<h3 style="color:#004aad;">
+✅ Experiencia
+</h3>
+
+<p>
+Más de 15 años brindando soluciones
+informáticas y atención personalizada.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3 style="color:#004aad;">
+🔍 Diagnóstico Profesional
+</h3>
+
+<p>
+Revisamos el equipo antes de realizar
+cualquier reparación.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3 style="color:#004aad;">
+🛠️ Trabajo Garantizado
+</h3>
+
+<p>
+Realizamos servicios con responsabilidad,
+orden y cuidado de los componentes.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3 style="color:#004aad;">
+🚀 Soluciones Modernas
+</h3>
+
+<p>
+Actualización con SSD, optimización del sistema
+y mejoras de rendimiento.
+</p>
+
+</div>
+
 
 
 </div>
@@ -342,173 +592,109 @@ y configuración de seguridad.
 </section>
 <section id="galeria">
 
+<section id="galeria">
+
 <div class="container">
 
-<h2>Galería de Trabajos</h2>
+<h2>Trabajos Realizados</h2>
 
 
 <div class="grid">
 
 
 <div class="card">
+
 
 <img src="imagenes/mantenimiento.jpg"
 alt="Mantenimiento de computadora"
 style="width:100%; border-radius:10px;">
 
-<h3 style="margin-top:15px; color:#004aad;">
+
+<h3 style="color:#004aad; margin-top:15px;">
 Mantenimiento Preventivo
 </h3>
 
+
 <p>
-Limpieza interna, revisión de componentes
-y mejora del rendimiento.
+Limpieza interna, eliminación de polvo,
+cambio de pasta térmica y revisión del sistema
+de refrigeración.
 </p>
+
 
 </div>
 
 
 
+
 <div class="card">
+
 
 <img src="imagenes/reparacion.jpg"
 alt="Reparación de computadora"
 style="width:100%; border-radius:10px;">
 
-<h3 style="margin-top:15px; color:#004aad;">
+
+<h3 style="color:#004aad; margin-top:15px;">
 Reparación de Equipos
 </h3>
 
+
 <p>
-Solución de fallas de hardware y software.
+Diagnóstico de fallas, reparación de hardware
+y solución de problemas del sistema.
 </p>
+
 
 </div>
 
 
 
+
 <div class="card">
+
 
 <img src="imagenes/ssd.jpg"
-alt="Instalación SSD"
+alt="Instalación de SSD"
 style="width:100%; border-radius:10px;">
 
-<h3 style="margin-top:15px; color:#004aad;">
-Actualización SSD
+
+<h3 style="color:#004aad; margin-top:15px;">
+Actualización con SSD
 </h3>
+
 
 <p>
-Equipos más rápidos con almacenamiento moderno.
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-<section id="antesdespues">
-
-<div class="container">
-
-<h2>Antes y Después</h2>
-
-
-<div class="grid">
-
-
-<div class="card">
-
-<h3 style="color:#004aad;">
-Limpieza Interna
-</h3>
-
-
-<div class="grid">
-
-
-<div>
-
-<p><strong>Antes</strong></p>
-
-<img src="imagenes/antes-polvo.jpg"
-alt="Equipo con polvo"
-style="width:100%; border-radius:10px;">
-
-</div>
-
-
-
-<div>
-
-<p><strong>Después</strong></p>
-
-<img src="imagenes/despues-limpio.jpg"
-alt="Equipo limpio"
-style="width:100%; border-radius:10px;">
-
-</div>
-
-
-</div>
-
-
-<p style="margin-top:15px;">
-Eliminación de polvo, limpieza de ventiladores
-y mantenimiento interno.
+Mejora de velocidad mediante instalación
+y configuración de almacenamiento SSD.
 </p>
 
 
 </div>
-
 
 
 
 <div class="card">
 
-<h3 style="color:#004aad;">
-Mejora de Rendimiento
+
+<img src="imagenes/formateo.jpg"
+alt="Instalación de sistema operativo"
+style="width:100%; border-radius:10px;">
+
+
+<h3 style="color:#004aad; margin-top:15px;">
+Instalación de Sistema
 </h3>
 
 
-<div class="grid">
-
-
-<div>
-
-<p><strong>Antes</strong></p>
-
-<img src="imagenes/antes-hdd.jpg"
-alt="Disco HDD"
-style="width:100%; border-radius:10px;">
-
-</div>
-
-
-
-<div>
-
-<p><strong>Después</strong></p>
-
-<img src="imagenes/despues-ssd.jpg"
-alt="Disco SSD"
-style="width:100%; border-radius:10px;">
-
-</div>
-
-
-</div>
-
-
-<p style="margin-top:15px;">
-Actualización de almacenamiento para lograr
-mayor velocidad y rendimiento.
+<p>
+Configuración de Windows, programas,
+controladores y optimización.
 </p>
 
 
 </div>
+
 
 
 </div>
@@ -653,7 +839,157 @@ Cliente particular
 </section>
 
 
+<section id="promocion">
 
+<div class="container">
+
+
+<div class="card" style="
+text-align:center;
+background:#004aad;
+color:white;
+">
+
+
+<h2 style="color:white;">
+¿Tu computadora está lenta?
+</h2>
+
+
+<p style="
+font-size:20px;
+line-height:1.6;
+">
+
+Realizamos mantenimiento, limpieza y optimización
+para mejorar el rendimiento de tu equipo.
+
+</p>
+
+
+
+<p style="
+font-size:18px;
+margin-top:15px;
+">
+
+💻 Computadoras lentas<br>
+🛡️ Virus y errores del sistema<br>
+⚡ Equipos con bajo rendimiento<br>
+💾 Mejoras con SSD
+
+</p>
+
+
+
+<a class="btn" 
+href="https://wa.me/593987586172"
+style="background:white;color:#004aad;">
+
+Solicitar revisión
+
+</a>
+
+
+
+</div>
+
+
+</div>
+
+</section>
+<section id="informacion">
+
+<div class="container">
+
+<h2>Información del Servicio</h2>
+
+
+<div class="grid">
+
+
+
+<div class="card">
+
+<h3 style="color:#004aad;">
+📍 Ubicación
+</h3>
+
+<p>
+Atención técnica personalizada para clientes
+particulares, hogares y pequeños negocios.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3 style="color:#004aad;">
+🕒 Horario de Atención
+</h3>
+
+<p>
+Lunes a sábado<br>
+Atención mediante WhatsApp previa coordinación.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3 style="color:#004aad;">
+💻 Servicios
+</h3>
+
+<p>
+Mantenimiento, reparación, optimización,
+instalación de sistemas y actualización de equipos.
+</p>
+
+</div>
+
+
+
+</div>
+
+
+<div class="card" style="
+margin-top:30px;
+text-align:center;
+">
+
+
+<h3 style="color:#004aad;">
+Solicita tu diagnóstico
+</h3>
+
+
+<p style="font-size:18px;">
+
+Envíanos un mensaje indicando el problema
+de tu computadora y te ayudaremos.
+
+</p>
+
+
+<a class="btn"
+href="https://wa.me/593987586172">
+
+Contactar ahora
+
+</a>
+
+
+</div>
+
+
+</div>
+
+</section>
 
 <section id="contacto">
 
@@ -770,10 +1106,65 @@ WhatsApp: 0987586172
 </p>
 
 
+<footer style="
+background:#222;
+color:white;
+text-align:center;
+padding:35px 20px;
+margin-top:40px;
+">
+
+
+<h2 style="color:white;">
+Servicio Técnico PC
+</h2>
+
+
+<p style="
+font-size:18px;
+margin-top:15px;
+">
+
+Soluciones profesionales para reparación,
+mantenimiento y optimización de computadoras.
+
+</p>
+
+
+
+<p style="
+margin-top:20px;
+">
+
+📱 WhatsApp: <strong>0987586172</strong>
+
+</p>
+
+
+
+<div style="
+margin-top:20px;
+font-size:25px;
+">
+
+💻 🔧 ⚡ 🛡️
+
+</div>
+
+
+
+<p style="
+margin-top:25px;
+font-size:14px;
+">
+
+© 2026 Servicio Técnico PC<br>
+Todos los derechos reservados.
+
+</p>
+
+
 </footer>
-
-
-
 </body>
 
 </html>
