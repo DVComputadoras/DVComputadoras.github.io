@@ -442,7 +442,31 @@ padding:20px;
 
 /* ANIMACIONES */
 
+/* ANIMACION SCROLL */
 
+
+.card,
+.titulo,
+.contenido,
+.galeria img{
+
+opacity:0;
+
+transform:translateY(40px);
+
+transition:1s;
+
+}
+
+
+
+.mostrar{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
 @keyframes aparecer{
 
 from{
