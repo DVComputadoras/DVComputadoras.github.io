@@ -1635,3 +1635,27 @@ button{
     color:white;
 
 }
+.footer-info h3{
+
+    color:white;
+    margin-bottom:15px;
+    margin-top:20px;
+
+}
+
+
+.footer-info p{
+
+    color:#bbb;
+    margin:10px 0;
+    line-height:1.6;
+
+}
+
+
+.footer-info i{
+
+    color:#0066ff;
+    margin-right:8px;
+
+}
