@@ -1,17 +1,21 @@
-document.addEventListener("DOMContentLoaded", function(){
+// DV COMPUTADORAS V8.0
 
 
-
-/* ANIMACIÓN AL HACER SCROLL */
-
-
-const elementos = document.querySelectorAll(
-".card, .titulo, .contenido, .galeria img"
+console.log(
+"DV Computadoras - Página cargada correctamente"
 );
 
 
 
-const mostrarElemento = () => {
+// Animación al desplazarse
+
+
+const elementos = document.querySelectorAll(
+".servicio-card, .trabajo-card, .testimonio-card"
+);
+
+
+const mostrar = () => {
 
 
 elementos.forEach(elemento => {
@@ -20,15 +24,11 @@ elementos.forEach(elemento => {
 const posicion = elemento.getBoundingClientRect().top;
 
 
-const alturaPantalla = window.innerHeight;
+if(posicion < window.innerHeight - 100){
 
+elemento.style.opacity="1";
 
-
-if(posicion < alturaPantalla - 100){
-
-
-elemento.classList.add("mostrar");
-
+elemento.style.transform="translateY(0)";
 
 }
 
@@ -36,85 +36,26 @@ elemento.classList.add("mostrar");
 });
 
 
-};
+}
+
+
+
+elementos.forEach(elemento=>{
+
+elemento.style.opacity="0";
+
+elemento.style.transform="translateY(40px)";
+
+elemento.style.transition=".6s";
+
+});
 
 
 
 window.addEventListener(
 "scroll",
-mostrarElemento
+mostrar
 );
 
 
-mostrarElemento();
-
-
-
-
-
-
-/* EFECTO EN EL MENU AL BAJAR */
-
-
-const header = document.querySelector("header");
-
-
-window.addEventListener("scroll",()=>{
-
-
-if(window.scrollY > 50){
-
-
-header.style.background="rgba(0,0,0,0.95)";
-
-
-}else{
-
-
-header.style.background="transparent";
-
-
-}
-
-
-});
-
-
-
-
-
-
-/* BOTON WHATSAPP ANIMADO */
-
-
-const whatsapp = document.querySelector(".whatsapp");
-
-
-if(whatsapp){
-
-
-setInterval(()=>{
-
-
-whatsapp.style.transform="scale(1.05)";
-
-
-setTimeout(()=>{
-
-
-whatsapp.style.transform="scale(1)";
-
-
-},400);
-
-
-
-},2000);
-
-
-
-}
-
-
-
-});
+mostrar();
