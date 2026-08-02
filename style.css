@@ -1013,3 +1013,33 @@ bottom:15px;
 
 
 }
+.social-float{
+    position:fixed;
+    right:20px;
+    top:50%;
+    transform:translateY(-50%);
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    z-index:9999;
+}
+
+.social-float a{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:28px;
+    color:white;
+    background:#111827;
+    text-decoration:none;
+    transition:.35s;
+    box-shadow:0 5px 20px rgba(0,0,0,.4);
+}
+
+.social-float a:hover{
+    transform:scale(1.15);
+    background:#00C6FF;
+}
