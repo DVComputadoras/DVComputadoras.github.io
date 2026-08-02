@@ -2241,3 +2241,53 @@ PROCESO DE SERVICIO - 4 TARJETAS EN UNA FILA
     }
 
 }
+/*=========================================
+PROCESO DE SERVICIO PREMIUM
+=========================================*/
+
+.proceso-paso{
+
+    display:inline-block;
+
+    margin:6px 0 12px;
+
+    padding:4px 12px;
+
+    background:#eaf3ff;
+
+    color:var(--azul);
+
+    border-radius:20px;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+}
+
+.proceso-numero{
+
+    width:50px;
+    height:50px;
+
+    font-size:18px;
+
+    font-weight:800;
+
+}
+
+.proceso-card{
+
+    border-top:4px solid var(--azul);
+
+}
+
+.proceso-card:hover{
+
+    border-top-color:#00b894;
+
+}
