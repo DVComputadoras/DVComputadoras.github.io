@@ -81,3 +81,74 @@ menu.classList.toggle("active");
 
 }
 );
+// ANIMACION DE CONTADORES
+
+
+const contadores = document.querySelectorAll(".contador");
+
+
+const iniciarContadores = () => {
+
+
+contadores.forEach(contador=>{
+
+
+const posicion =
+contador.getBoundingClientRect().top;
+
+
+
+if(posicion < window.innerHeight - 100){
+
+
+const objetivo =
++contador.getAttribute("data-numero");
+
+
+let numero = 0;
+
+
+
+const tiempo = setInterval(()=>{
+
+
+numero += Math.ceil(objetivo / 50);
+
+
+
+if(numero >= objetivo){
+
+
+numero = objetivo;
+
+clearInterval(tiempo);
+
+
+}
+
+
+
+contador.textContent = numero + "+";
+
+
+},30);
+
+
+
+}
+
+
+});
+
+
+};
+
+
+
+window.addEventListener(
+"scroll",
+iniciarContadores
+);
+
+
+iniciarContadores();
