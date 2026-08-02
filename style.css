@@ -1,1 +1,174 @@
+/*======================================================
+ DV COMPUTADORAS V10 PRO
+ STYLE.CSS
+ Capítulo 1 - Base General
+======================================================*/
 
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* VARIABLES */
+
+:root{
+
+    --color-primario:#0A4DFF;
+    --color-secundario:#00C2FF;
+    --color-oscuro:#081320;
+    --color-fondo:#F4F8FC;
+    --color-blanco:#FFFFFF;
+    --color-texto:#344054;
+
+    --sombra:0 10px 35px rgba(0,0,0,.10);
+
+    --radio:18px;
+
+    --transicion:.35s ease;
+
+}
+
+/* HTML */
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+/* BODY */
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:var(--color-fondo);
+
+    color:var(--color-texto);
+
+    overflow-x:hidden;
+
+}
+
+/* IMÁGENES */
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+    height:auto;
+
+}
+
+/* ENLACES */
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+/* LISTAS */
+
+ul{
+
+    list-style:none;
+
+}
+
+/* CONTENEDOR */
+
+.container{
+
+    width:min(1200px,92%);
+
+    margin:auto;
+
+}
+
+/* TITULOS */
+
+h1,h2,h3,h4{
+
+    color:var(--color-oscuro);
+
+    line-height:1.2;
+
+}
+
+p{
+
+    line-height:1.8;
+
+}
+
+/* BOTONES */
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:15px 30px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:var(--transicion);
+
+    cursor:pointer;
+
+}
+
+.btn-primary{
+
+    background:var(--color-primario);
+
+    color:white;
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:var(--sombra);
+
+}
+
+.btn-secondary{
+
+    background:white;
+
+    color:var(--color-primario);
+
+    border:2px solid var(--color-primario);
+
+}
+
+.btn-secondary:hover{
+
+    background:var(--color-primario);
+
+    color:white;
+
+}
+
+/* SECCIONES */
+
+section{
+
+    padding:90px 0;
+
+}
