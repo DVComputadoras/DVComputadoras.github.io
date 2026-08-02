@@ -59,3 +59,25 @@ mostrar
 
 
 mostrar();
+// MENU MOVIL
+
+
+const botonMenu =
+document.querySelector(".menu-btn");
+
+
+const menu =
+document.querySelector(".menu");
+
+
+
+botonMenu.addEventListener(
+"click",
+()=>{
+
+
+menu.classList.toggle("active");
+
+
+}
+);
