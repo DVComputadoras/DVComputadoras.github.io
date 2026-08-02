@@ -3,104 +3,112 @@
 
 <head>
 
-    <!-- ========================================= -->
-    <!-- DV COMPUTADORAS V10.0 PRO -->
-    <!-- Desarrollado desde cero -->
-    <!-- ========================================= -->
+    <!-- ==========================================================
+        DV COMPUTADORAS V10 PRO
+        Desarrollado desde cero
+        Versión 10.0
+    =========================================================== -->
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+          content="width=device-width, initial-scale=1.0">
 
     <title>DV Computadoras | Servicio Técnico Profesional</title>
 
     <meta name="description"
-        content="Servicio técnico profesional de computadoras y laptops. Diagnóstico, mantenimiento, reparación, instalación de sistemas y recuperación de información.">
+          content="Servicio técnico especializado en computadoras y laptops. Diagnóstico, mantenimiento, instalación de Windows, cambio de SSD, recuperación de datos y soporte profesional.">
 
     <meta name="keywords"
-        content="reparación de computadoras, laptops, mantenimiento, servicio técnico, Windows, SSD, DV Computadoras">
+          content="reparación de computadoras, laptops, mantenimiento, SSD, Windows, servicio técnico">
 
     <meta name="author"
-        content="DV Computadoras">
+          content="DV Computadoras">
 
     <meta name="theme-color"
-        content="#0A4DFF">
+          content="#0A4DFF">
 
     <!-- Open Graph -->
 
     <meta property="og:title"
-        content="DV Computadoras">
+          content="DV Computadoras">
 
     <meta property="og:description"
-        content="Servicio Técnico Profesional de Computadoras">
+          content="Servicio Técnico Profesional de Computadoras">
 
     <meta property="og:type"
-        content="website">
+          content="website">
 
     <meta property="og:image"
-        content="imagenes/logo.png">
+          content="imagenes/logo.png">
 
     <!-- Favicon -->
 
     <link rel="icon"
-        href="imagenes/logo.png">
+          href="imagenes/logo.png">
 
     <!-- Google Fonts -->
 
     <link rel="preconnect"
-        href="https://fonts.googleapis.com">
+          href="https://fonts.googleapis.com">
 
     <link rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin>
+          href="https://fonts.gstatic.com"
+          crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+          rel="stylesheet">
 
     <!-- Font Awesome -->
 
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <!-- AOS -->
 
     <link rel="stylesheet"
-        href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+          href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 
     <!-- Swiper -->
 
     <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+          href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
     <!-- CSS -->
 
     <link rel="stylesheet"
-        href="style.css">
+          href="style.css">
 
 </head>
 
 <body>
 
-        <!-- ========================= -->
+    <!-- ========================= -->
     <!-- PRELOADER -->
     <!-- ========================= -->
 
     <div id="preloader">
-        <div class="loader-box">
-            <img src="imagenes/logo.png" alt="DV Computadoras" class="loader-logo">
-            <div class="loader-spinner"></div>
-            <p>Cargando experiencia profesional...</p>
+
+        <div class="loader">
+
+            <img src="imagenes/logo.png"
+                 alt="DV Computadoras">
+
+            <div class="spinner"></div>
+
+            <p>Cargando...</p>
+
         </div>
+
     </div>
 
     <!-- ========================= -->
     <!-- BOTÓN WHATSAPP -->
     <!-- ========================= -->
 
-    <a href="https://wa.me/593TU_NUMERO"
-       class="whatsapp-float"
+    <a href="https://wa.me/593XXXXXXXXX"
+       class="whatsapp-btn"
        target="_blank"
        aria-label="WhatsApp">
 
@@ -109,13 +117,13 @@
     </a>
 
     <!-- ========================= -->
-    <!-- BOTÓN VOLVER ARRIBA -->
+    <!-- BOTÓN ARRIBA -->
     <!-- ========================= -->
 
-    <button id="scrollTop"
+    <button id="toTop"
             aria-label="Volver arriba">
 
-        <i class="fa-solid fa-arrow-up"></i>
+        <i class="fas fa-arrow-up"></i>
 
     </button>
 
@@ -127,12 +135,19 @@
 
         <div class="container">
 
-            <a href="#" class="logo">
+            <a href="#inicio"
+               class="logo">
 
                 <img src="imagenes/logo.png"
                      alt="DV Computadoras">
 
-                <span>DV Computadoras</span>
+                <div>
+
+                    <h2>DV Computadoras</h2>
+
+                    <span>Servicio Técnico Profesional</span>
+
+                </div>
 
             </a>
 
@@ -156,11 +171,12 @@
 
             </nav>
 
-            <div id="menu-toggle">
+            <button id="menu-btn"
+                    aria-label="Abrir menú">
 
-                <i class="fa-solid fa-bars"></i>
+                <i class="fas fa-bars"></i>
 
-            </div>
+            </button>
 
         </div>
 
@@ -170,41 +186,50 @@
     <!-- HERO -->
     <!-- ========================= -->
 
-    <section id="inicio" class="hero">
+    <section id="inicio"
+             class="hero">
 
-        <div class="container hero-content">
+        <div class="container hero-grid">
 
-            <div class="hero-text" data-aos="fade-right">
+            <div class="hero-text"
+                 data-aos="fade-right">
 
-                <span class="badge">
-                    ✔ Servicio Técnico Profesional
+                <span class="tag">
+
+                    <i class="fas fa-circle-check"></i>
+
+                    Más de 7 años brindando soluciones
+
                 </span>
 
                 <h1>
+
                     Reparación Profesional de
-                    <span>Computadoras y Laptops</span>
+                    Computadoras y Laptops
+
                 </h1>
 
                 <p>
 
-                    Diagnóstico, mantenimiento preventivo,
-                    instalación de Windows, cambio de discos SSD,
-                    recuperación de información y reparación de
-                    equipos con atención personalizada.
+                    Diagnóstico especializado, mantenimiento preventivo,
+                    instalación de Windows, optimización de equipos,
+                    cambio de SSD, recuperación de información
+                    y soporte técnico para hogares y pequeños negocios.
 
                 </p>
 
                 <div class="hero-buttons">
 
-                    <a href="#contacto" class="btn btn-primary">
+                    <a href="#contacto"
+                       class="btn btn-primary">
 
                         Solicitar Diagnóstico
 
                     </a>
 
-                    <a href="https://wa.me/593TU_NUMERO"
+                    <a href="https://wa.me/593XXXXXXXXX"
                        target="_blank"
-                       class="btn btn-secondary">
+                       class="btn btn-outline">
 
                         WhatsApp
 
@@ -218,7 +243,7 @@
                  data-aos="fade-left">
 
                 <img src="imagenes/hero.webp"
-                     alt="Servicio Técnico">
+                     alt="Técnico reparando computadora">
 
             </div>
 
@@ -226,16 +251,6 @@
 
     </section>
 
+    <!-- ===== CONTINÚA EN LA ENTREGA 2 ===== -->
 
-
-    <!-- JavaScript -->
-
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <script src="script.js"></script>
-
-</body>
-
-</html>
+    <!-- NO BORRES ESTA LÍNEA -->
