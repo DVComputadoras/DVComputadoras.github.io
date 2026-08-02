@@ -2351,19 +2351,3 @@ grid-template-columns:repeat(2,1fr);
 }
 
 
-/* CELULAR */
-
-@media(max-width:576px){
-
-.proceso-grid{
-
-grid-template-columns:1fr;
-
-}
-
-}
-/*==================================================
-AJUSTE PROCESO DE TRABAJO
-==================================================*/
-
-
