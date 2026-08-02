@@ -1918,3 +1918,19 @@ img.cargada{
     opacity:1;
 
 }
+.hero-text {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+    visibility: visible !important;
+}
+
+.hero {
+    display: block !important;
+}
+
+.galeria img,
+.gallery img {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+}
