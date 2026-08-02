@@ -266,3 +266,118 @@ elementosAnimar.forEach(elemento=>{
     transition:.8s ease;
 
 }
+/*==================================================
+VALIDACIÓN DE FORMULARIO
+==================================================*/
+
+
+const formulario = document.querySelector(".formulario form");
+
+
+if(formulario){
+
+
+    formulario.addEventListener("submit",(e)=>{
+
+
+        e.preventDefault();
+
+
+
+        const nombre = formulario.querySelector(
+        'input[placeholder="Nombre"]'
+        ).value;
+
+
+
+        const mensaje = formulario.querySelector(
+        "textarea"
+        ).value;
+
+
+
+        if(nombre === "" || mensaje === ""){
+
+
+            alert(
+            "Por favor completa los campos requeridos."
+            );
+
+
+            return;
+
+
+        }
+
+
+
+        alert(
+        "Gracias " + nombre +
+        ". Tu mensaje fue preparado correctamente."
+        );
+
+
+
+        formulario.reset();
+
+
+
+    });
+
+
+
+}
+
+
+
+
+
+/*==================================================
+AÑO AUTOMÁTICO FOOTER
+==================================================*/
+
+
+const fecha = new Date();
+
+const año = fecha.getFullYear();
+
+
+const copyright = document.querySelector(".footer-copy");
+
+
+if(copyright){
+
+
+    copyright.innerHTML =
+    "© " + año +
+    " DV Computadoras | Todos los derechos reservados.";
+
+
+}
+
+
+
+
+
+
+/*==================================================
+CARGA SUAVE DE IMÁGENES
+==================================================*/
+
+
+const imagenes = document.querySelectorAll("img");
+
+
+imagenes.forEach(imagen=>{
+
+
+    imagen.addEventListener("load",()=>{
+
+
+        imagen.classList.add("cargada");
+
+
+    });
+
+
+});
