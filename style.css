@@ -2185,3 +2185,79 @@ html {
 
 
 }
+/* ==========================
+   ADAPTACIÓN PARA CELULARES
+========================== */
+
+@media (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: 90%;
+        margin: auto;
+    }
+
+    /* Logo principal */
+    header img,
+    .logo img {
+        max-width: 150px;
+        height: auto;
+    }
+
+    /* Títulos */
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    /* Menú */
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 17px;
+    }
+
+    /* Secciones en una columna */
+    .servicios,
+    .cards,
+    .galeria,
+    .contenedor {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /* Imágenes */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Botones */
+    .btn {
+        display: block;
+        width: 90%;
+        margin: 15px auto;
+        text-align: center;
+    }
+
+    /* Footer */
+    footer img {
+        width: 120px;
+    }
+
+}
