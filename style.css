@@ -1709,3 +1709,115 @@ button{
     margin-right:10px;
 
 }
+/*==========================
+ ALERTA MANTENIMIENTO
+==========================*/
+
+
+.mantenimiento-alerta{
+
+    margin-top:45px;
+
+    background:linear-gradient(
+    135deg,
+    #0066ff,
+    #003b99
+    );
+
+    padding:35px 25px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    color:white;
+
+    box-shadow:0 10px 35px rgba(0,102,255,.35);
+
+    animation:latidoAlerta 3s infinite;
+
+}
+
+
+
+.alerta-icono{
+
+    font-size:45px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.mantenimiento-alerta h3{
+
+    font-size:32px;
+
+    margin-bottom:15px;
+
+    font-weight:800;
+
+}
+
+
+
+.mantenimiento-alerta p{
+
+    font-size:18px;
+
+    line-height:1.7;
+
+    max-width:800px;
+
+    margin:auto;
+
+}
+
+
+
+.mantenimiento-alerta span{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    background:white;
+
+    color:#003b99;
+
+    padding:12px 25px;
+
+    border-radius:30px;
+
+    font-weight:700;
+
+}
+
+
+
+@keyframes latidoAlerta{
+
+
+0%{
+
+transform:scale(1);
+
+}
+
+
+50%{
+
+transform:scale(1.03);
+
+}
+
+
+100%{
+
+transform:scale(1);
+
+}
+
+
+}
