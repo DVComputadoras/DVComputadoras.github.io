@@ -2175,3 +2175,69 @@ PROCESO EN DOS COLUMNAS (RECOMENDADO)
     }
 
 }
+
+/*==================================================
+PROCESO DE SERVICIO - 4 TARJETAS EN UNA FILA
+==================================================*/
+
+.proceso-grid{
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+
+}
+
+.proceso-card{
+
+    min-height:240px;
+    padding:18px 16px;
+
+}
+
+.proceso-numero{
+
+    width:42px;
+    height:42px;
+    font-size:18px;
+    margin-bottom:10px;
+
+}
+
+.proceso-card h3{
+
+    font-size:17px;
+    line-height:1.2;
+    margin-bottom:10px;
+
+}
+
+.proceso-card p{
+
+    font-size:13.5px;
+    line-height:1.45;
+
+}
+
+
+
+@media (max-width:992px){
+
+    .proceso-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+
+@media (max-width:768px){
+
+    .proceso-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
