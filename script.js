@@ -100,8 +100,7 @@ mostrarElementos();
    CONTADORES ESTADISTICAS
 ============================== */
 
-
-const contadores = document.querySelectorAll(".numero");
+const contadores = document.querySelectorAll(".estadistica .numero");
 
 
 contadores.forEach(contador=>{
