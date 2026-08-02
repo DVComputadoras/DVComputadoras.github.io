@@ -1659,3 +1659,53 @@ button{
     margin-right:8px;
 
 }
+/*==========================
+ MANTENIMIENTO PREVENTIVO
+==========================*/
+
+
+.mantenimiento{
+
+    background:white;
+
+}
+
+
+
+.mantenimiento-final{
+
+    margin-top:40px;
+
+    background:#e8f1ff;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+}
+
+
+
+.mantenimiento-final p{
+
+    color:#003b99;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    line-height:1.7;
+
+}
+
+
+
+.mantenimiento-final i{
+
+    color:#0066ff;
+
+    margin-right:10px;
+
+}
