@@ -1,144 +1,83 @@
-// DV COMPUTADORAS V8.0
+/* =========================================
+   DV SECURITY PREMIUM V9.0
+   SCRIPT.JS
+   FUNCIONES INTERACTIVAS
+========================================= */
 
 
-console.log(
-"DV Computadoras - Página cargada correctamente"
-);
+/* ==============================
+   MENU MOVIL
+============================== */
+
+
+const menuToggle = document.querySelector(".menu-toggle");
+
+const navLinks = document.querySelector(".nav-links");
+
+
+if(menuToggle){
+
+    menuToggle.addEventListener("click",()=>{
+
+        navLinks.classList.toggle("active");
+
+    });
+
+}
+
+
+/* Cerrar menú al seleccionar opción */
+
+document.querySelectorAll(".nav-links a").forEach(link=>{
+
+
+    link.addEventListener("click",()=>{
+
+
+        navLinks.classList.remove("active");
+
+
+    });
+
+
+});
 
 
 
-// Animación al desplazarse
+
+/* ==============================
+   ANIMACION AL HACER SCROLL
+============================== */
 
 
 const elementos = document.querySelectorAll(
-".servicio-card, .trabajo-card, .testimonio-card"
+".card-servicio, .estadistica, .imagen-galeria, .experiencia-box"
 );
 
 
-const mostrar = () => {
 
+const mostrarElementos = ()=>{
 
-elementos.forEach(elemento => {
 
+    elementos.forEach(elemento=>{
 
-const posicion = elemento.getBoundingClientRect().top;
 
+        const posicion = elemento.getBoundingClientRect().top;
 
-if(posicion < window.innerHeight - 100){
 
-elemento.style.opacity="1";
+        const alturaPantalla = window.innerHeight;
 
-elemento.style.transform="translateY(0)";
 
-}
+        if(posicion < alturaPantalla - 80){
 
 
-});
+            elemento.classList.add("animar");
 
 
-}
+        }
 
 
-
-elementos.forEach(elemento=>{
-
-elemento.style.opacity="0";
-
-elemento.style.transform="translateY(40px)";
-
-elemento.style.transition=".6s";
-
-});
-
-
-
-window.addEventListener(
-"scroll",
-mostrar
-);
-
-
-mostrar();
-// MENU MOVIL
-
-
-const botonMenu =
-document.querySelector(".menu-btn");
-
-
-const menu =
-document.querySelector(".menu");
-
-
-
-botonMenu.addEventListener(
-"click",
-()=>{
-
-
-menu.classList.toggle("active");
-
-
-}
-);
-// ANIMACION DE CONTADORES
-
-
-const contadores = document.querySelectorAll(".contador");
-
-
-const iniciarContadores = () => {
-
-
-contadores.forEach(contador=>{
-
-
-const posicion =
-contador.getBoundingClientRect().top;
-
-
-
-if(posicion < window.innerHeight - 100){
-
-
-const objetivo =
-+contador.getAttribute("data-numero");
-
-
-let numero = 0;
-
-
-
-const tiempo = setInterval(()=>{
-
-
-numero += Math.ceil(objetivo / 50);
-
-
-
-if(numero >= objetivo){
-
-
-numero = objetivo;
-
-clearInterval(tiempo);
-
-
-}
-
-
-
-contador.textContent = numero + "+";
-
-
-},30);
-
-
-
-}
-
-
-});
+    });
 
 
 };
@@ -147,8 +86,160 @@ contador.textContent = numero + "+";
 
 window.addEventListener(
 "scroll",
-iniciarContadores
+mostrarElementos
 );
 
 
-iniciarContadores();
+mostrarElementos();
+
+
+
+
+
+/* ==============================
+   CONTADORES ESTADISTICAS
+============================== */
+
+
+const contadores = document.querySelectorAll(".numero");
+
+
+contadores.forEach(contador=>{
+
+
+    let inicio = 0;
+
+
+    const final = parseInt(
+        contador.dataset.numero
+    );
+
+
+    const tiempo = 2000;
+
+
+    const incremento = final / (tiempo / 20);
+
+
+
+    const actualizar = ()=>{
+
+
+        inicio += incremento;
+
+
+        if(inicio < final){
+
+
+            contador.textContent =
+            Math.floor(inicio);
+
+
+            setTimeout(
+                actualizar,
+                20
+            );
+
+
+        }else{
+
+
+            contador.textContent =
+            final;
+
+
+        }
+
+
+    };
+
+
+
+    actualizar();
+
+
+
+});
+
+
+
+
+
+
+/* ==============================
+   AÑO AUTOMATICO FOOTER
+============================== */
+
+
+const fecha = new Date();
+
+const año = fecha.getFullYear();
+
+
+const elementoAño =
+document.getElementById("year");
+
+
+if(elementoAño){
+
+    elementoAño.textContent = año;
+
+}
+
+
+
+
+
+/* ==============================
+   EFECTO TITULO NAVEGADOR
+============================== */
+
+
+let tituloOriginal =
+document.title;
+
+
+
+document.addEventListener(
+"visibilitychange",
+()=>{
+
+
+if(document.hidden){
+
+
+document.title =
+"🔒 DV Security - Protección Activa";
+
+
+}else{
+
+
+document.title =
+tituloOriginal;
+
+
+}
+
+
+
+});
+
+
+
+
+
+/* ==============================
+   CARGA INICIAL
+============================== */
+
+
+window.addEventListener(
+"load",
+()=>{
+
+
+document.body.classList.add("cargado");
+
+
+});
