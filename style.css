@@ -1,82 +1,252 @@
+/*==================================================
+ DV COMPUTADORAS V9.0 PRO
+ Autor: DV Computadoras
+==================================================*/
+
+/* RESET */
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
 }
-
 
 html{
     scroll-behavior:smooth;
 }
 
-
 body{
 
-    background:#050914;
-    color:white;
+    font-family:'Poppins',sans-serif;
+
+    background:#050816;
+
+    color:#ffffff;
+
     overflow-x:hidden;
 
-}
-
-
-
-/* BARRA SUPERIOR */
-
-
-.top-bar{
-
-    background:#020611;
-    padding:12px;
-    text-align:center;
-    color:#ddd;
-    font-size:14px;
+    line-height:1.6;
 
 }
 
 
-.top-bar i{
+/* VARIABLES */
 
-    color:#00c6ff;
+:root{
+
+--azul:#1E88E5;
+
+--azul2:#1565C0;
+
+--celeste:#29B6F6;
+
+--oscuro:#050816;
+
+--oscuro2:#0d1226;
+
+--gris:#a9b0c7;
+
+--blanco:#ffffff;
+
+--borde:rgba(255,255,255,.08);
+
+--glass:rgba(255,255,255,.05);
+
+--sombra:0 20px 45px rgba(0,0,0,.35);
 
 }
 
 
 
+/* CONTENEDOR */
+
+.contenedor{
+
+width:min(1200px,90%);
+
+margin:auto;
+
+}
 
 
 
-/* MENU */
+/* TITULOS */
 
+.titulo{
+
+text-align:center;
+
+margin-bottom:70px;
+
+}
+
+
+
+.titulo span{
+
+display:inline-block;
+
+color:var(--celeste);
+
+font-size:.95rem;
+
+font-weight:700;
+
+letter-spacing:3px;
+
+margin-bottom:15px;
+
+text-transform:uppercase;
+
+}
+
+
+
+.titulo h2{
+
+font-size:2.7rem;
+
+margin-bottom:20px;
+
+font-weight:700;
+
+}
+
+
+
+.titulo p{
+
+max-width:720px;
+
+margin:auto;
+
+color:var(--gris);
+
+font-size:1.05rem;
+
+}
+
+
+
+/* BOTONES */
+
+.btn{
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:10px;
+
+padding:15px 35px;
+
+border-radius:50px;
+
+font-weight:600;
+
+text-decoration:none;
+
+transition:.35s;
+
+cursor:pointer;
+
+}
+
+
+
+.btn-principal{
+
+background:linear-gradient(135deg,var(--azul),var(--celeste));
+
+color:#fff;
+
+box-shadow:0 10px 35px rgba(30,136,229,.35);
+
+}
+
+
+
+.btn-principal:hover{
+
+transform:translateY(-4px);
+
+}
+
+
+
+.btn-secundario{
+
+border:2px solid var(--azul);
+
+color:#fff;
+
+}
+
+
+
+.btn-secundario:hover{
+
+background:var(--azul);
+
+}
+
+
+
+/* HEADER */
 
 .header{
 
-    position:sticky;
-    top:0;
-    z-index:1000;
+position:fixed;
 
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+top:0;
 
-    padding:15px 7%;
+left:0;
 
-    background:rgba(5,9,20,.75);
+width:100%;
 
-    backdrop-filter:blur(15px);
+z-index:999;
 
-    border-bottom:1px solid rgba(255,255,255,.1);
+background:rgba(5,8,22,.88);
+
+backdrop-filter:blur(18px);
+
+border-bottom:1px solid var(--borde);
 
 }
 
+
+
+.header .contenedor{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:18px 0;
+
+}
 
 
 
 .logo{
 
-    display:flex;
-    align-items:center;
-    gap:15px;
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+text-decoration:none;
+
+color:#fff;
+
+font-size:1.2rem;
+
+font-weight:700;
 
 }
 
@@ -84,593 +254,78 @@ body{
 
 .logo img{
 
-    width:75px;
-    height:75px;
-    object-fit:contain;
+width:55px;
 
 }
 
 
 
-.logo h1{
+.menu{
 
-    font-size:25px;
+display:flex;
 
-}
-
-
-
-.logo p{
-
-    color:#00c6ff;
-    font-size:13px;
+gap:35px;
 
 }
 
 
 
+.menu a{
 
+color:#fff;
 
-nav{
+text-decoration:none;
 
-    display:flex;
-    gap:25px;
+font-weight:500;
 
-}
-
-
-nav a{
-
-    text-decoration:none;
-    color:white;
-    transition:.3s;
+transition:.3s;
 
 }
 
 
 
-nav a:hover{
+.menu a:hover{
 
-    color:#00c6ff;
+color:var(--celeste);
 
 }
 
 
 
+.menu-movil{
 
+display:none;
 
+font-size:30px;
+
+cursor:pointer;
+
+}
 
 
 
 /* HERO */
 
-
 .hero{
 
-    min-height:90vh;
+padding-top:150px;
 
-    display:flex;
+padding-bottom:100px;
 
-    justify-content:space-between;
-
-    align-items:center;
-
-    padding:80px 8%;
-
-    position:relative;
+background:
+radial-gradient(circle at top right,#1E88E540 0%,transparent 40%),
+radial-gradient(circle at bottom left,#29B6F620 0%,transparent 35%),
+var(--oscuro);
 
 }
 
 
 
-.hero::before{
-
-content:"";
-
-position:absolute;
-
-width:500px;
-
-height:500px;
-
-background:#0066ff;
-
-filter:blur(180px);
-
-right:-150px;
-
-top:-100px;
-
-opacity:.35;
-
-}
-
-
-
-
-
-.hero-text{
-
-max-width:650px;
-
-animation:entrada 1s ease;
-
-}
-
-
-
-.hero-text h2{
-
-font-size:55px;
-
-line-height:1.2;
-
-}
-
-
-
-.hero-text span{
-
-display:block;
-
-color:#00c6ff;
-
-font-size:25px;
-
-margin-top:15px;
-
-}
-
-
-
-
-.hero-text p{
-
-margin-top:25px;
-
-color:#ccc;
-
-font-size:18px;
-
-line-height:1.7;
-
-}
-
-
-
-
-
-.btn-primary{
-
-display:inline-block;
-
-margin-top:35px;
-
-padding:16px 35px;
-
-background:#00c6ff;
-
-color:#00121c;
-
-border-radius:40px;
-
-text-decoration:none;
-
-font-weight:700;
-
-transition:.4s;
-
-}
-
-
-
-.btn-primary:hover{
-
-transform:translateY(-5px);
-
-box-shadow:0 0 30px #00c6ff;
-
-}
-
-
-
-
-
-
-.hero-image img{
-
-width:430px;
-
-animation:flotar 4s infinite;
-
-}
-
-
-
-
-
-
-
-/* ESTADISTICAS */
-
-
-.estadisticas{
+.hero-contenido{
 
 display:grid;
 
-grid-template-columns:repeat(4,1fr);
-
-gap:25px;
-
-padding:70px 8%;
-
-background:#020611;
-
-}
-
-
-
-
-.estadisticas div{
-
-text-align:center;
-
-padding:35px;
-
-border-radius:25px;
-
-background:rgba(255,255,255,.05);
-
-border:1px solid rgba(255,255,255,.1);
-
-}
-
-
-
-.estadisticas h3{
-
-font-size:45px;
-
-color:#00c6ff;
-
-}
-
-
-
-.estadisticas p{
-
-color:#ccc;
-
-}
-
-
-
-
-
-
-
-
-/* TITULOS GENERALES */
-
-
-section h2{
-
-text-align:center;
-
-font-size:42px;
-
-margin-bottom:20px;
-
-}
-
-
-
-section p{
-
-text-align:center;
-
-color:#ccc;
-
-}
-
-
-
-
-
-/* FOOTER */
-
-
-footer{
-
-background:#020611;
-
-padding:30px;
-
-text-align:center;
-
-color:#aaa;
-
-}
-
-
-
-
-
-
-/* ANIMACIONES */
-
-
-@keyframes entrada{
-
-from{
-
-opacity:0;
-
-transform:translateX(-60px);
-
-}
-
-to{
-
-opacity:1;
-
-transform:translateX(0);
-
-}
-
-}
-
-
-
-@keyframes flotar{
-
-
-0%,100%{
-
-transform:translateY(0);
-
-}
-
-
-50%{
-
-transform:translateY(-20px);
-
-}
-
-
-}
-
-
-
-
-
-
-
-
-/* CELULAR */
-
-
-@media(max-width:900px){
-
-
-.header{
-
-flex-direction:column;
-
-gap:20px;
-
-}
-
-
-
-nav{
-
-flex-wrap:wrap;
-
-justify-content:center;
-
-}
-
-
-
-.hero{
-
-flex-direction:column;
-
-text-align:center;
-
-}
-
-
-
-.hero-text h2{
-
-font-size:38px;
-
-}
-
-
-
-.hero-image img{
-
-width:280px;
-
-margin-top:40px;
-
-}
-
-
-
-.estadisticas{
-
 grid-template-columns:1fr 1fr;
-
-}
-
-
-}
-
-
-
-
-
-@media(max-width:500px){
-
-
-.estadisticas{
-
-grid-template-columns:1fr;
-
-}
-
-
-}
-/* SERVICIOS PREMIUM */
-
-
-.servicios{
-
-padding:100px 8%;
-
-background:#050914;
-
-}
-
-
-
-.titulo-seccion{
-
-text-align:center;
-
-margin-bottom:60px;
-
-}
-
-
-
-.titulo-seccion h2{
-
-font-size:45px;
-
-}
-
-
-
-
-.servicios-grid{
-
-display:grid;
-
-grid-template-columns:repeat(3,1fr);
-
-gap:30px;
-
-}
-
-
-
-
-.servicio-card{
-
-background:rgba(255,255,255,.05);
-
-padding:35px;
-
-border-radius:25px;
-
-text-align:center;
-
-border:1px solid rgba(255,255,255,.1);
-
-transition:.4s;
-
-}
-
-
-
-.servicio-card i{
-
-font-size:45px;
-
-color:#00c6ff;
-
-margin-bottom:25px;
-
-}
-
-
-
-.servicio-card h3{
-
-font-size:22px;
-
-margin-bottom:15px;
-
-}
-
-
-
-.servicio-card p{
-
-line-height:1.7;
-
-color:#ccc;
-
-}
-
-
-
-
-.servicio-card:hover{
-
-transform:translateY(-12px);
-
-background:rgba(0,198,255,.12);
-
-box-shadow:0 0 35px rgba(0,198,255,.35);
-
-}
-
-
-
-@media(max-width:900px){
-
-.servicios-grid{
-
-grid-template-columns:1fr 1fr;
-
-}
-
-}
-
-
-
-@media(max-width:600px){
-
-.servicios-grid{
-
-grid-template-columns:1fr;
-
-}
-
-}
-/* NOSOTROS */
-
-
-.nosotros{
-
-padding:100px 8%;
-
-background:#020611;
-
-}
-
-
-
-.nosotros-contenedor{
-
-display:flex;
 
 align-items:center;
 
@@ -680,106 +335,71 @@ gap:60px;
 
 
 
-.nosotros-imagen{
+.subtitulo{
 
-flex:1;
+display:inline-block;
 
-}
+padding:8px 18px;
 
+background:rgba(30,136,229,.15);
 
+border-radius:40px;
 
-.nosotros-imagen img{
+color:var(--celeste);
 
-width:100%;
+font-size:.9rem;
 
-max-width:450px;
-
-border-radius:30px;
-
-box-shadow:0 0 40px rgba(0,198,255,.25);
+margin-bottom:25px;
 
 }
 
 
 
-.nosotros-texto{
+.hero h1{
 
-flex:1;
+font-size:3.3rem;
 
-}
+line-height:1.2;
 
-
-
-.nosotros-texto h2{
-
-text-align:left;
-
-font-size:45px;
+margin-bottom:25px;
 
 }
 
 
 
-.nosotros-texto h2 span{
+.hero h1 span{
 
-color:#00c6ff;
-
-}
-
-
-
-.nosotros-texto p{
-
-text-align:left;
-
-margin-top:20px;
-
-line-height:1.8;
-
-font-size:17px;
+color:var(--celeste);
 
 }
 
 
 
-.lista-experiencia{
+.hero p{
 
-margin:35px 0;
+font-size:1.08rem;
+
+color:var(--gris);
+
+margin-bottom:35px;
+
+}
+
+
+
+.hero-botones{
 
 display:flex;
 
-flex-direction:column;
+gap:20px;
 
-gap:15px;
-
-}
-
-
-
-.lista-experiencia div{
-
-font-size:17px;
+flex-wrap:wrap;
 
 }
 
 
 
-.lista-experiencia i{
-
-color:#00c6ff;
-
-margin-right:12px;
-
-}
-
-
-
-@media(max-width:900px){
-
-
-.nosotros-contenedor{
-
-flex-direction:column;
+.hero-imagen{
 
 text-align:center;
 
@@ -787,171 +407,130 @@ text-align:center;
 
 
 
-.nosotros-texto h2{
+.hero-imagen img{
 
-text-align:center;
+width:100%;
 
-font-size:35px;
+max-width:520px;
 
-}
+animation:flotar 5s ease-in-out infinite;
 
-
-
-.nosotros-texto p{
-
-text-align:center;
-
-}
-
-
-}
-/* GALERIA */
-
-
-.trabajos{
-
-padding:100px 8%;
-
-background:#050914;
+filter:drop-shadow(0 25px 50px rgba(0,0,0,.45));
 
 }
 
 
 
-.galeria{
+/* ANIMACIÓN */
+
+@keyframes flotar{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-18px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+/*==================================================
+            ESTADISTICAS
+==================================================*/
+
+.estadisticas{
+
+padding:90px 0;
+
+background:var(--oscuro2);
+
+}
+
+.estadisticas .contenedor{
 
 display:grid;
 
 grid-template-columns:repeat(4,1fr);
 
-gap:25px;
+gap:30px;
+
+}
+
+.estadistica{
+
+background:var(--glass);
+
+border:1px solid var(--borde);
+
+border-radius:20px;
+
+padding:35px;
+
+text-align:center;
+
+transition:.35s;
+
+backdrop-filter:blur(10px);
+
+}
+
+.estadistica:hover{
+
+transform:translateY(-10px);
+
+box-shadow:var(--sombra);
+
+}
+
+.estadistica h2{
+
+font-size:3rem;
+
+color:var(--celeste);
+
+margin-bottom:10px;
+
+font-weight:700;
+
+}
+
+.estadistica p{
+
+color:var(--gris);
+
+font-size:1rem;
 
 }
 
 
 
-.trabajo-card{
+/*==================================================
+            SERVICIOS
+==================================================*/
 
-position:relative;
+.servicios{
 
-overflow:hidden;
+padding:120px 0;
 
-border-radius:25px;
-
-height:320px;
-
-border:1px solid rgba(255,255,255,.1);
+background:var(--oscuro);
 
 }
 
+.contenedor-servicios{
 
+width:min(1200px,90%);
 
-.trabajo-card img{
-
-width:100%;
-
-height:100%;
-
-object-fit:cover;
-
-transition:.5s;
-
-}
-
-
-
-
-.trabajo-card:hover img{
-
-transform:scale(1.15);
-
-}
-
-
-
-
-
-.trabajo-info{
-
-position:absolute;
-
-bottom:0;
-
-width:100%;
-
-padding:25px;
-
-background:linear-gradient(
-transparent,
-rgba(0,0,0,.95)
-);
-
-}
-
-
-
-.trabajo-info h3{
-
-font-size:21px;
-
-}
-
-
-
-.trabajo-info p{
-
-text-align:left;
-
-margin-top:10px;
-
-color:#ddd;
-
-font-size:14px;
-
-}
-
-
-
-
-@media(max-width:1000px){
-
-
-.galeria{
-
-grid-template-columns:repeat(2,1fr);
-
-}
-
-
-}
-
-
-
-@media(max-width:600px){
-
-
-.galeria{
-
-grid-template-columns:1fr;
-
-}
-
-
-}
-/* TESTIMONIOS */
-
-
-.testimonios{
-
-padding:100px 8%;
-
-background:#020611;
-
-}
-
-
-
-.testimonios-grid{
+margin:auto;
 
 display:grid;
 
@@ -959,509 +538,76 @@ grid-template-columns:repeat(3,1fr);
 
 gap:30px;
 
-margin-top:50px;
+}
+
+.card-servicio{
+
+background:linear-gradient(
+180deg,
+rgba(255,255,255,.05),
+rgba(255,255,255,.02));
+
+border:1px solid var(--borde);
+
+border-radius:22px;
+
+padding:40px 30px;
+
+transition:.35s;
+
+text-align:center;
+
+overflow:hidden;
+
+position:relative;
 
 }
 
+.card-servicio::before{
 
+content:"";
 
+position:absolute;
 
-.testimonio-card{
+top:0;
 
-background:rgba(255,255,255,.05);
+left:-100%;
 
-padding:35px;
+width:100%;
 
-border-radius:25px;
+height:4px;
 
-border:1px solid rgba(255,255,255,.1);
+background:linear-gradient(90deg,var(--celeste),var(--azul));
 
 transition:.4s;
 
 }
 
-
-
-.testimonio-card:hover{
-
-transform:translateY(-10px);
-
-box-shadow:0 0 30px rgba(0,198,255,.25);
-
-}
-
-
-
-
-.testimonio-card i{
-
-font-size:35px;
-
-color:#00c6ff;
-
-}
-
-
-
-.testimonio-card p{
-
-margin:25px 0;
-
-line-height:1.7;
-
-text-align:left;
-
-color:#ddd;
-
-}
-
-
-
-.testimonio-card h3{
-
-color:white;
-
-}
-
-
-
-.estrellas{
-
-color:#00c6ff;
-
-font-size:22px;
-
-margin-top:10px;
-
-}
-
-
-
-
-@media(max-width:900px){
-
-
-.testimonios-grid{
-
-grid-template-columns:1fr;
-
-}
-
-
-}
-/* CONTACTO */
-
-
-.contacto{
-
-padding:100px 8%;
-
-background:#050914;
-
-}
-
-
-
-.contacto-contenedor{
-
-display:grid;
-
-grid-template-columns:1fr 1fr;
-
-gap:50px;
-
-margin-top:50px;
-
-}
-
-
-
-
-.datos-contacto{
-
-background:rgba(255,255,255,.05);
-
-padding:40px;
-
-border-radius:25px;
-
-}
-
-
-
-.datos-contacto h3{
-
-font-size:28px;
-
-margin-bottom:30px;
-
-}
-
-
-
-.datos-contacto p{
-
-text-align:left;
-
-margin:20px 0;
-
-}
-
-
-
-.datos-contacto i{
-
-color:#00c6ff;
-
-margin-right:12px;
-
-font-size:20px;
-
-}
-
-
-
-
-.redes{
-
-display:flex;
-
-gap:20px;
-
-margin-top:35px;
-
-}
-
-
-
-.redes a{
-
-width:50px;
-
-height:50px;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-background:#020611;
-
-border-radius:50%;
-
-color:white;
-
-font-size:25px;
-
-transition:.3s;
-
-}
-
-
-
-.redes a:hover{
-
-background:#00c6ff;
-
-color:#00121c;
-
-}
-
-
-
-
-.formulario{
-
-background:rgba(255,255,255,.05);
-
-padding:40px;
-
-border-radius:25px;
-
-}
-
-
-
-
-.formulario input,
-.formulario textarea{
-
-width:100%;
-
-padding:15px;
-
-margin-bottom:20px;
-
-background:#020611;
-
-border:1px solid rgba(255,255,255,.15);
-
-border-radius:10px;
-
-color:white;
-
-}
-
-
-
-.formulario textarea{
-
-height:130px;
-
-resize:none;
-
-}
-
-
-
-.formulario button{
-
-width:100%;
-
-padding:15px;
-
-border:none;
-
-border-radius:30px;
-
-background:#00c6ff;
-
-font-size:17px;
-
-font-weight:bold;
-
-cursor:pointer;
-
-}
-
-
-
-
-/* WHATSAPP FLOTANTE */
-
-
-.whatsapp-float{
-
-position:fixed;
-
-right:25px;
-
-bottom:25px;
-
-width:65px;
-
-height:65px;
-
-border-radius:50%;
-
-background:#25d366;
-
-color:white;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-font-size:35px;
-
-text-decoration:none;
-
-z-index:999;
-
-box-shadow:0 0 25px rgba(37,211,102,.5);
-
-}
-
-
-
-.whatsapp-float:hover{
-
-transform:scale(1.1);
-
-}
-
-
-
-@media(max-width:900px){
-
-.contacto-contenedor{
-
-grid-template-columns:1fr;
-
-}
-
-}
-/* BOTON SUBIR */
-
-
-.btn-up{
-
-position:fixed;
-
-right:25px;
-
-bottom:105px;
-
-width:45px;
-
-height:45px;
-
-border-radius:50%;
-
-background:#00c6ff;
-
-color:#00121c;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-text-decoration:none;
-
-font-size:20px;
-
-z-index:900;
-
-transition:.3s;
-
-}
-
-
-
-.btn-up:hover{
-
-transform:translateY(-5px);
-
-box-shadow:0 0 20px #00c6ff;
-
-}
-/* MENU MOVIL */
-
-
-.menu-btn{
-
-display:none;
-
-font-size:30px;
-
-color:#00c6ff;
-
-cursor:pointer;
-
-}
-
-
-
-
-@media(max-width:900px){
-
-
-.menu-btn{
-
-display:block;
-
-}
-
-
-
-.menu{
-
-position:absolute;
-
-top:90px;
+.card-servicio:hover::before{
 
 left:0;
 
-width:100%;
+}
 
-background:#020611;
+.card-servicio:hover{
 
-display:none;
+transform:translateY(-12px);
 
-flex-direction:column;
-
-text-align:center;
-
-padding:30px;
+box-shadow:var(--sombra);
 
 }
 
+.icono{
 
+width:90px;
 
-.menu a{
+height:90px;
 
-padding:15px;
+margin:auto;
 
-}
+margin-bottom:25px;
 
-
-
-.menu.active{
-
-display:flex;
-
-}
-
-
-}
-/* EFECTO APARICION */
-
-
-.servicio-card,
-.trabajo-card,
-.testimonio-card,
-.estadisticas div{
-
-
-animation: aparecer .8s ease forwards;
-
-
-}
-
-
-
-@keyframes aparecer{
-
-
-from{
-
-opacity:0;
-
-transform:translateY(30px);
-
-}
-
-
-
-to{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-
-
-}
-/* TIKTOK */
-
-
-.tiktok{
-
-padding:100px 8%;
-
-background:#020611;
-
-}
-
-
-
-.tiktok-contenedor{
+border-radius:50%;
 
 display:flex;
 
@@ -1469,88 +615,1570 @@ align-items:center;
 
 justify-content:center;
 
-gap:50px;
-
-margin-top:50px;
+background:rgba(30,136,229,.15);
 
 }
 
+.icono i{
 
+font-size:38px;
 
-.tiktok-info{
-
-flex:1;
-
-text-align:center;
+color:var(--celeste);
 
 }
 
-
-
-.tiktok-info i{
-
-font-size:70px;
-
-color:white;
+.card-servicio h3{
 
 margin-bottom:20px;
 
+font-size:1.35rem;
+
+}
+
+.card-servicio p{
+
+color:var(--gris);
+
+font-size:.98rem;
+
+line-height:1.8;
+
+}
+/* =========================================
+   DV SECURITY PREMIUM V9.0
+   STYLE.CSS - CAPITULO 3
+   SECCIONES: SERVICIOS Y TARJETAS
+========================================= */
+
+
+/* ==============================
+   SECCION SERVICIOS
+============================== */
+
+.servicios {
+    padding: 80px 8%;
+    background: #050b18;
+    color: white;
+    text-align: center;
+}
+
+
+.servicios h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+    color: #00d9ff;
+    text-transform: uppercase;
+}
+
+
+.servicios p {
+    max-width: 800px;
+    margin: auto;
+    color: #cccccc;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+/* CONTENEDOR DE TARJETAS */
+
+.contenedor-servicios {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    gap: 30px;
+    margin-top: 50px;
+
+}
+
+
+/* TARJETAS */
+
+.card-servicio {
+
+    background: linear-gradient(
+        145deg,
+        #101c35,
+        #07101f
+    );
+
+    padding: 35px 25px;
+
+    border-radius: 20px;
+
+    border: 1px solid rgba(0,217,255,0.25);
+
+    transition: .4s;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.4);
+
+}
+
+
+.card-servicio:hover {
+
+    transform: translateY(-12px);
+
+    border-color:#00d9ff;
+
+    box-shadow:
+    0 15px 35px rgba(0,217,255,.35);
+
 }
 
 
 
-.tiktok-info h3{
+/* ICONOS */
 
-font-size:35px;
+.card-servicio i {
 
-}
+    font-size:45px;
 
+    color:#00d9ff;
 
-
-.tiktok-info p{
-
-margin:20px 0;
+    margin-bottom:20px;
 
 }
 
 
 
-.tiktok-video{
+.card-servicio h3 {
 
-flex:1;
+    font-size:24px;
 
-height:500px;
+    margin-bottom:15px;
 
-display:flex;
-
-justify-content:center;
+    color:white;
 
 }
 
 
 
-.tiktok-video iframe{
+.card-servicio p {
 
-width:320px;
+    font-size:16px;
 
-height:500px;
+    color:#bbbbbb;
 
-border-radius:25px;
-
-background:#000;
+    line-height:1.5;
 
 }
 
 
 
+/* BOTON SERVICIOS */
+
+.btn-servicio {
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    padding:12px 28px;
+
+    background:#00d9ff;
+
+    color:#001018;
+
+    border-radius:30px;
+
+    font-weight:bold;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+
+
+.btn-servicio:hover {
+
+    background:white;
+
+    transform:scale(1.05);
+
+}
+
+
+
+/* ==============================
+   SECCION EXPERIENCIA
+============================== */
+
+
+.experiencia {
+
+    padding:70px 8%;
+
+    background:#02050b;
+
+    color:white;
+
+}
+
+
+
+.experiencia-contenedor {
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:40px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+.experiencia-box {
+
+    width:260px;
+
+    padding:30px;
+
+    text-align:center;
+
+    background:#0b162b;
+
+    border-radius:18px;
+
+    border:1px solid #1c365e;
+
+}
+
+
+
+.experiencia-box h3 {
+
+    font-size:42px;
+
+    color:#00d9ff;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.experiencia-box span {
+
+    font-size:18px;
+
+    color:#ddd;
+
+}
+
+
+
+/* ==============================
+   ANIMACION ENTRADA
+============================== */
+
+
+.animar {
+
+    animation:
+
+    aparecer 1.2s ease;
+
+}
+
+
+
+@keyframes aparecer {
+
+    from {
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/* ==============================
+   RESPONSIVE TABLET
+============================== */
 
 
 @media(max-width:900px){
 
 
-.tiktok-contenedor{
+.servicios h2{
 
-flex-direction:column;
+font-size:32px;
+
+}
+
+
+.contenedor-servicios{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+
+}
+
+
+
+
+/* ==============================
+   RESPONSIVE CELULAR
+============================== */
+
+
+@media(max-width:600px){
+
+
+.servicios{
+
+padding:60px 5%;
+
+}
+
+
+.servicios h2{
+
+font-size:28px;
+
+}
+
+
+.contenedor-servicios{
+
+grid-template-columns:1fr;
+
+}
+
+
+.card-servicio{
+
+padding:25px 15px;
+
+}
+
+
+.experiencia-box{
+
+width:100%;
+
+}
+
+
+}
+/* =========================================
+   DV SECURITY PREMIUM V9.0
+   STYLE.CSS - CAPITULO 4
+   ESTADISTICAS - GALERIA - CONTACTO
+========================================= */
+
+
+/* ==============================
+   ESTADISTICAS
+============================== */
+
+
+.estadisticas {
+
+    padding:80px 8%;
+
+    background:
+    linear-gradient(
+    135deg,
+    #07101f,
+    #02050b
+    );
+
+    color:white;
+
+    text-align:center;
+
+}
+
+
+
+.estadisticas h2 {
+
+    color:#00d9ff;
+
+    font-size:38px;
+
+    margin-bottom:50px;
+
+}
+
+
+
+.contenedor-estadisticas {
+
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:30px;
+
+}
+
+
+
+.estadistica {
+
+
+    background:#0b162b;
+
+    padding:35px 20px;
+
+    border-radius:20px;
+
+    border:1px solid rgba(0,217,255,.3);
+
+    transition:.4s;
+
+}
+
+
+
+.estadistica:hover {
+
+
+    transform:translateY(-10px);
+
+    box-shadow:
+    0 10px 30px rgba(0,217,255,.3);
+
+}
+
+
+
+.estadistica h3 {
+
+
+    font-size:45px;
+
+    color:#00d9ff;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.estadistica p {
+
+
+    color:#ddd;
+
+    font-size:18px;
+
+}
+
+
+
+/* ==============================
+   GALERIA DE TRABAJOS
+============================== */
+
+
+.galeria {
+
+
+    padding:80px 8%;
+
+    background:#050b18;
+
+    text-align:center;
+
+}
+
+
+
+.galeria h2 {
+
+
+    color:#00d9ff;
+
+    font-size:38px;
+
+    margin-bottom:40px;
+
+
+}
+
+
+
+.contenedor-galeria {
+
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(260px,1fr));
+
+    gap:25px;
+
+}
+
+
+
+.imagen-galeria {
+
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+    border:2px solid transparent;
+
+    transition:.4s;
+
+}
+
+
+
+.imagen-galeria img {
+
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+
+
+.imagen-galeria:hover {
+
+
+    border-color:#00d9ff;
+
+    transform:scale(1.03);
+
+}
+
+
+
+.imagen-galeria:hover img {
+
+
+    transform:scale(1.12);
+
+}
+
+
+
+
+/* ==============================
+   SECCION CONTACTO
+============================== */
+
+
+.contacto {
+
+
+    padding:80px 8%;
+
+    background:#02050b;
+
+    color:white;
+
+    text-align:center;
+
+}
+
+
+
+.contacto h2 {
+
+
+    font-size:38px;
+
+    color:#00d9ff;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.contacto p {
+
+
+    color:#ccc;
+
+    font-size:18px;
+
+}
+
+
+
+.botones-contacto {
+
+
+    margin-top:40px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+.btn-whatsapp {
+
+
+    background:#25d366;
+
+    color:white;
+
+    padding:15px 35px;
+
+    border-radius:40px;
+
+    text-decoration:none;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+
+}
+
+
+
+.btn-whatsapp:hover {
+
+
+    transform:scale(1.08);
+
+    box-shadow:
+
+    0 0 20px rgba(37,211,102,.6);
+
+}
+
+
+
+
+.btn-llamada {
+
+
+    background:#00d9ff;
+
+    color:#001018;
+
+    padding:15px 35px;
+
+    border-radius:40px;
+
+    text-decoration:none;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+
+
+.btn-llamada:hover {
+
+
+    background:white;
+
+    transform:scale(1.08);
+
+}
+
+
+
+/* ==============================
+   FOOTER
+============================== */
+
+
+footer {
+
+
+    background:#000;
+
+    color:#aaa;
+
+    text-align:center;
+
+    padding:30px 10px;
+
+    font-size:15px;
+
+}
+
+
+
+footer strong {
+
+
+    color:#00d9ff;
+
+}
+
+
+
+
+/* ==============================
+   MOVIMIENTO SUAVE
+============================== */
+
+
+.reveal {
+
+
+    opacity:0;
+
+    transform:translateY(50px);
+
+    transition:1s;
+
+}
+
+
+
+.reveal.activo {
+
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+/* =========================================
+   DV SECURITY PREMIUM V9.0
+   STYLE.CSS - CAPITULO 5
+   MENU - MOVIL - EFECTOS PREMIUM
+========================================= */
+
+
+/* ==============================
+   MENU PRINCIPAL
+============================== */
+
+
+header {
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    background:
+
+    rgba(2,5,11,.85);
+
+    backdrop-filter:blur(12px);
+
+    border-bottom:
+
+    1px solid rgba(0,217,255,.2);
+
+}
+
+
+
+.navbar {
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:15px 8%;
+
+}
+
+
+
+.logo {
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+
+
+.logo img {
+
+    width:65px;
+
+    height:65px;
+
+    object-fit:contain;
+
+}
+
+
+
+.logo h1 {
+
+    color:#00d9ff;
+
+    font-size:28px;
+
+    letter-spacing:1px;
+
+}
+
+
+
+
+/* LINKS MENU */
+
+
+.nav-links {
+
+    display:flex;
+
+    gap:30px;
+
+    list-style:none;
+
+}
+
+
+
+.nav-links a {
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    position:relative;
+
+    transition:.3s;
+
+}
+
+
+
+.nav-links a::after {
+
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:3px;
+
+    background:#00d9ff;
+
+    transition:.3s;
+
+}
+
+
+
+.nav-links a:hover {
+
+
+    color:#00d9ff;
+
+}
+
+
+
+.nav-links a:hover::after {
+
+
+    width:100%;
+
+}
+
+
+
+
+/* ==============================
+   BOTON MENU MOVIL
+============================== */
+
+
+.menu-toggle {
+
+
+    display:none;
+
+    color:#00d9ff;
+
+    font-size:32px;
+
+    cursor:pointer;
+
+}
+
+
+
+
+
+/* ==============================
+   FONDO TECNOLOGICO
+============================== */
+
+
+.fondo-tech {
+
+
+    position:absolute;
+
+    width:100%;
+
+    height:100%;
+
+    overflow:hidden;
+
+    z-index:-1;
+
+}
+
+
+
+.fondo-tech span {
+
+
+    position:absolute;
+
+    width:20px;
+
+    height:20px;
+
+    background:#00d9ff;
+
+    border-radius:50%;
+
+    opacity:.15;
+
+    animation:
+
+    mover 10s linear infinite;
+
+}
+
+
+
+
+@keyframes mover {
+
+
+    0% {
+
+        transform:
+
+        translateY(100vh)
+
+        scale(0);
+
+    }
+
+
+    100% {
+
+        transform:
+
+        translateY(-100vh)
+
+        scale(1);
+
+    }
+
+}
+
+
+
+
+
+/* ==============================
+   BOTON WHATSAPP FLOTANTE
+============================== */
+
+
+.whatsapp-flotante {
+
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:50%;
+
+    background:#25d366;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:35px;
+
+    text-decoration:none;
+
+    z-index:999;
+
+    box-shadow:
+
+    0 5px 20px rgba(0,0,0,.4);
+
+    animation:
+
+    pulso 2s infinite;
+
+}
+
+
+
+@keyframes pulso {
+
+
+    0% {
+
+        transform:scale(1);
+
+    }
+
+
+    50% {
+
+        transform:scale(1.12);
+
+    }
+
+
+    100% {
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+
+
+/* ==============================
+   MENU RESPONSIVE CELULAR
+============================== */
+
+
+@media(max-width:768px){
+
+
+
+.menu-toggle {
+
+    display:block;
+
+}
+
+
+
+.nav-links {
+
+
+    position:absolute;
+
+    top:95px;
+
+    left:0;
+
+    width:100%;
+
+    background:#02050b;
+
+    flex-direction:column;
+
+    text-align:center;
+
+    padding:30px 0;
+
+    display:none;
+
+}
+
+
+
+.nav-links.active {
+
+
+    display:flex;
+
+}
+
+
+
+.nav-links li {
+
+
+    margin:10px 0;
+
+}
+
+
+
+.logo h1 {
+
+
+    font-size:22px;
+
+}
+
+
+
+.logo img {
+
+
+    width:50px;
+
+    height:50px;
+
+}
+
+
+
+}
+/* =========================================
+   DV SECURITY PREMIUM V9.0
+   STYLE.CSS - CAPITULO 6 FINAL
+   EFECTOS AVANZADOS Y ACABADO PREMIUM
+========================================= */
+
+
+/* ==============================
+   HERO PRINCIPAL
+============================== */
+
+
+.hero {
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    padding:120px 8% 60px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #02050b,
+    #071b36
+    );
+
+}
+
+
+
+.hero h1 {
+
+
+    font-size:55px;
+
+    color:white;
+
+    text-transform:uppercase;
+
+    animation:
+
+    aparecer 1s ease;
+
+}
+
+
+
+.hero h1 span {
+
+
+    color:#00d9ff;
+
+}
+
+
+
+.hero p {
+
+
+    margin-top:20px;
+
+    max-width:750px;
+
+    color:#ddd;
+
+    font-size:20px;
+
+    line-height:1.6;
+
+    animation:
+
+    aparecer 1.5s ease;
+
+}
+
+
+
+.hero-buttons {
+
+
+    margin-top:35px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+
+/* ==============================
+   BOTONES HERO
+============================== */
+
+
+.btn-principal {
+
+
+    padding:15px 35px;
+
+    background:#00d9ff;
+
+    color:#001018;
+
+    border-radius:40px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    transition:.4s;
+
+}
+
+
+
+.btn-principal:hover {
+
+
+    background:white;
+
+    transform:translateY(-5px);
+
+    box-shadow:
+
+    0 0 25px #00d9ff;
+
+}
+
+
+
+
+
+.btn-secundario {
+
+
+    padding:15px 35px;
+
+    border:2px solid #00d9ff;
+
+    color:white;
+
+    border-radius:40px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    transition:.4s;
+
+}
+
+
+
+.btn-secundario:hover {
+
+
+    background:#00d9ff;
+
+    color:#001018;
+
+}
+
+
+
+
+/* ==============================
+   EFECTO BRILLO
+============================== */
+
+
+.brillo {
+
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+.brillo::before {
+
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-100%;
+
+    width:50%;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(
+
+    120deg,
+
+    transparent,
+
+    rgba(255,255,255,.5),
+
+    transparent
+
+    );
+
+
+    transition:.7s;
+
+}
+
+
+
+.brillo:hover::before {
+
+
+    left:120%;
+
+}
+
+
+
+
+
+/* ==============================
+   TARJETAS CON EFECTO LUZ
+============================== */
+
+
+.card-servicio,
+.estadistica {
+
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+.card-servicio::before,
+.estadistica::before {
+
+
+    content:"";
+
+    position:absolute;
+
+    width:100px;
+
+    height:100px;
+
+    background:#00d9ff;
+
+    filter:blur(60px);
+
+    top:-50px;
+
+    right:-50px;
+
+    opacity:.3;
+
+}
+
+
+
+
+
+/* ==============================
+   SCROLL SUAVE
+============================== */
+
+
+html {
+
+    scroll-behavior:smooth;
+
+}
+
+
+
+
+
+/* ==============================
+   SELECCION DE TEXTO
+============================== */
+
+
+::selection {
+
+
+    background:#00d9ff;
+
+    color:#001018;
+
+}
+
+
+
+
+/* ==============================
+   RESPONSIVE FINAL
+============================== */
+
+
+@media(max-width:768px){
+
+
+.hero h1 {
+
+
+    font-size:38px;
+
+}
+
+
+
+.hero p {
+
+
+    font-size:17px;
+
+}
+
+
+
+.hero {
+
+
+    padding-top:150px;
+
+}
+
+
+
+}
+
+
+
+@media(max-width:480px){
+
+
+.hero h1 {
+
+
+    font-size:30px;
+
+}
+
+
+
+.btn-principal,
+.btn-secundario {
+
+
+    width:90%;
 
 }
 
