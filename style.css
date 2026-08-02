@@ -1902,3 +1902,19 @@ RESPONSIVE CELULAR
 
 
 }
+ /* EFECTO CARGA IMÁGENES */
+
+img{
+
+    opacity:0;
+
+    transition:.5s ease;
+
+}
+
+
+img.cargada{
+
+    opacity:1;
+
+}
