@@ -2261,3 +2261,65 @@ html {
     }
 
 }
+.proceso {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.proceso h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.pasos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.paso {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+}
+
+.paso span {
+    display: inline-flex;
+    width: 45px;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #0b5ed7;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.paso h3 {
+    margin-top: 15px;
+    font-size: 22px;
+}
+
+.paso p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+/* CELULAR */
+@media(max-width:768px){
+
+    .pasos {
+        grid-template-columns: 1fr;
+    }
+
+    .proceso h2 {
+        font-size: 26px;
+    }
+
+    .paso {
+        width: 100%;
+    }
+}
