@@ -2406,60 +2406,61 @@ GALERIA DE TRABAJOS
 
 }
 /*==================================================
-ESTILO AZUL TECNOLÓGICO DV COMPUTADORAS
+TEMA AZUL TECNOLÓGICO GENERAL
 ==================================================*/
 
 body{
 
-    background:#071426;
-
-    color:#f1f5f9;
+    background:#081525;
 
 }
 
 
-/* Secciones principales */
+/* Todas las secciones */
 
 section{
 
-    background:transparent;
+    background:#081525;
 
 }
 
 
-/* Tarjetas generales */
+/* Contenedores de contenido */
 
-.servicio-card,
-.proceso-card,
-.galeria-item,
-.card{
+.container{
 
-    background:#10233f;
-
-    box-shadow:0 12px 35px rgba(0,0,0,.35);
-
-    border:1px solid rgba(255,255,255,.08);
+    position:relative;
 
 }
 
 
-/* Titulos */
+/* Títulos principales */
 
-.titulo h2{
+.titulo h2,
+.titulo-seccion h2{
 
     color:#ffffff;
 
 }
 
 
-.titulo p{
+.titulo span,
+.titulo-seccion span{
+
+    color:#38bdf8;
+
+}
+
+
+.titulo p,
+.titulo-seccion p{
 
     color:#cbd5e1;
 
 }
 
 
-/* Textos */
+/* Textos generales */
 
 p{
 
@@ -2468,33 +2469,66 @@ p{
 }
 
 
-/* Efecto suave en tarjetas */
+/* Tarjetas */
+
+.servicio-card,
+.proceso-card,
+.galeria-item,
+.card,
+.razon-card{
+
+    background:#10243f;
+
+    color:#ffffff;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+}
+
+
+/* Titulos dentro de tarjetas */
+
+.servicio-card h3,
+.proceso-card h3,
+.galeria-item h3,
+.card h3,
+.razon-card h3{
+
+    color:#ffffff;
+
+}
+
+
+/* Efecto */
 
 .servicio-card:hover,
 .proceso-card:hover,
 .galeria-item:hover,
-.card:hover{
+.card:hover,
+.razon-card:hover{
 
-    transform:translateY(-8px);
+    transform:translateY(-6px);
 
-    box-shadow:0 18px 45px rgba(0,123,255,.25);
+    box-shadow:0 20px 45px rgba(0,140,255,.25);
 
 }
 
 
-/* Fondo de galería */
+/* Galería */
 
 .galeria{
 
-    background:#091b33;
+    background:#081525;
 
 }
 
 
-/* Proceso */
+/* Footer */
 
-.proceso{
+footer{
 
-    background:#071426;
+    background:#050d18;
 
 }
