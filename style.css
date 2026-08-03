@@ -148,10 +148,11 @@ header{
 
 .logo img{
 
-    width:170px;
+    width:90px;
+    height:auto;
+    display:block;
 
 }
-
 
 
 /* MENU */
