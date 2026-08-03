@@ -2397,3 +2397,49 @@ GALERIA DE TRABAJOS
     display:block;
 
 }
+
+/* =================================
+   GALERIA MOVIL 2 COLUMNAS
+================================= */
+
+@media(max-width:768px){
+
+    .galeria-grid{
+
+        width:100%;
+
+        display:grid;
+
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+
+        gap:18px;
+
+    }
+
+
+    .galeria-item{
+
+        height:auto;
+
+        width:100%;
+
+        border-radius:18px;
+
+        overflow:hidden;
+
+    }
+
+
+    .galeria-item img{
+
+        width:100%;
+
+        height:160px;
+
+        object-fit:cover;
+
+        display:block;
+
+    }
+
+}
