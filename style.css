@@ -2443,3 +2443,26 @@ GALERIA DE TRABAJOS
     }
 
 }
+
+/* =================================
+   AJUSTE LOGO MOVIL
+================================= */
+
+@media(max-width:768px){
+
+    .logo img{
+
+        width:110px;
+
+        height:auto;
+
+    }
+
+
+    .navbar{
+
+        height:65px;
+
+    }
+
+}
