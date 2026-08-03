@@ -1374,9 +1374,7 @@ footer p{
  RESPONSIVE CELULAR
 ==========================*/
 
-
 @media(max-width:768px){
-
 
     .container{
 
@@ -1384,23 +1382,23 @@ footer p{
 
     }
 
-
-
     header{
 
         height:auto;
 
     }
 
-
-
     .navbar{
 
         height:70px;
 
+        display:flex;
+
+        justify-content:space-between;
+
+        align-items:center;
+
     }
-
-
 
     .logo img{
 
@@ -1408,15 +1406,15 @@ footer p{
 
     }
 
-
-
     .menu-toggle{
 
         display:block;
 
+        margin-left:auto;
+
+        cursor:pointer;
+
     }
-
-
 
     .menu{
 
@@ -1428,7 +1426,7 @@ footer p{
 
         width:100%;
 
-        background:white;
+        background:#fff;
 
         flex-direction:column;
 
@@ -1442,15 +1440,11 @@ footer p{
 
     }
 
-
-
     .menu.active{
 
         display:flex;
 
     }
-
-
 
     .menu li{
 
@@ -1458,15 +1452,11 @@ footer p{
 
     }
 
-
-
     .btn-header{
 
         display:none;
 
     }
-
-
 
     section{
 
@@ -1474,15 +1464,11 @@ footer p{
 
     }
 
-
-
     .hero{
 
         padding-top:100px;
 
     }
-
-
 
     .hero-text h1{
 
@@ -1490,15 +1476,11 @@ footer p{
 
     }
 
-
-
     .hero-text p{
 
         font-size:15px;
 
     }
-
-
 
     .hero-image::before{
 
@@ -1508,41 +1490,56 @@ footer p{
 
     }
 
-
-
-
-
+    /* Una columna */
     .servicios-grid,
-
     .ventajas-grid,
-
-    .proceso-grid,
-
-    .galeria-grid{
+    .proceso-grid{
 
         grid-template-columns:1fr;
 
     }
 
+    /* Galería: 2 x 2 en celular */
+    .galeria-grid{
 
+        display:grid;
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:15px;
+
+    }
+
+    .galeria-item{
+
+        width:100%;
+
+    }
+
+    .galeria-item img{
+
+        width:100%;
+
+        aspect-ratio:1/1;
+
+        object-fit:cover;
+
+        display:block;
+
+    }
 
     .titulo h2,
-
     .section-title h2{
 
         font-size:30px;
 
     }
 
-
-
     .nosotros-text h2{
 
         font-size:30px;
 
     }
-
-
 
     .contacto-container{
 
@@ -1552,27 +1549,13 @@ footer p{
 
     }
 
-
-
     .contacto h2{
 
         font-size:30px;
 
     }
 
-
-
-    .galeria-item{
-
-        height:240px;
-
-    }
-
-
-
 }
-
-
 
 
 
