@@ -2350,4 +2350,58 @@ grid-template-columns:repeat(2,1fr);
 
 }
 
+/*==================================================
+GALERIA DE TRABAJOS
+==================================================*/
 
+.galeria{
+
+    padding:90px 0;
+
+    background:#ffffff;
+
+}
+
+.galeria-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+    margin-top:50px;
+
+}
+
+.galeria-item{
+
+    background:#ffffff;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.10);
+
+    transition:.35s;
+
+}
+
+.galeria-item:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.galeria-item img{
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:cover;
+
+    display:block;
+
+}
