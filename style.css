@@ -2219,20 +2219,27 @@ PROCESO DE SERVICIO - 4 TARJETAS EN UNA FILA
 
 }
 
+@media (max-width:768px){
 
+    .header .container{
 
-@media (max-width:992px){
-
-    .proceso-grid{
-
-        grid-template-columns:repeat(2,1fr);
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
 
     }
 
-}
+    .menu-toggle{
 
+        display:block;
 
-@media (max-width:768px){
+        margin-left:auto;
+
+        font-size:28px;
+
+        cursor:pointer;
+
+    }
 
     .proceso-grid{
 
@@ -2241,6 +2248,8 @@ PROCESO DE SERVICIO - 4 TARJETAS EN UNA FILA
     }
 
 }
+
+
 /*=========================================
 PROCESO DE SERVICIO PREMIUM
 =========================================*/
