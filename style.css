@@ -2405,3 +2405,96 @@ GALERIA DE TRABAJOS
     display:block;
 
 }
+/*==================================================
+ESTILO AZUL TECNOLÓGICO DV COMPUTADORAS
+==================================================*/
+
+body{
+
+    background:#071426;
+
+    color:#f1f5f9;
+
+}
+
+
+/* Secciones principales */
+
+section{
+
+    background:transparent;
+
+}
+
+
+/* Tarjetas generales */
+
+.servicio-card,
+.proceso-card,
+.galeria-item,
+.card{
+
+    background:#10233f;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.35);
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+
+/* Titulos */
+
+.titulo h2{
+
+    color:#ffffff;
+
+}
+
+
+.titulo p{
+
+    color:#cbd5e1;
+
+}
+
+
+/* Textos */
+
+p{
+
+    color:#cbd5e1;
+
+}
+
+
+/* Efecto suave en tarjetas */
+
+.servicio-card:hover,
+.proceso-card:hover,
+.galeria-item:hover,
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 45px rgba(0,123,255,.25);
+
+}
+
+
+/* Fondo de galería */
+
+.galeria{
+
+    background:#091b33;
+
+}
+
+
+/* Proceso */
+
+.proceso{
+
+    background:#071426;
+
+}
