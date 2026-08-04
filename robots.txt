@@ -23,4 +23,4 @@ Allow: /imagenes/
 
 # Sitemap
 
-Sitemap: https://TU-USUARIO.github.io/TU-REPOSITORIO/sitemap.xml
+Sitemap: https://github.com/DVComputadoras/DVComputadoras.github.io
