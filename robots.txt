@@ -1,1 +1,26 @@
+#==================================================
+# DV COMPUTADORAS V11
+# ROBOTS.TXT
+#==================================================
 
+
+User-agent: *
+
+Allow: /
+
+
+# Archivos importantes
+
+Allow: /index.html
+Allow: /style.css
+Allow: /script.js
+
+
+# Carpeta de imágenes
+
+Allow: /imagenes/
+
+
+# Sitemap
+
+Sitemap: https://TU-USUARIO.github.io/TU-REPOSITORIO/sitemap.xml
