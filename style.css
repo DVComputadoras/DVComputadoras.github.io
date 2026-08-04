@@ -2058,3 +2058,40 @@ TÍTULO - SEÑALES DE MANTENIMIENTO
     max-width:650px;
 
 }
+/*=========================================
+CORRECCIÓN V11 - TARJETAS EN CELULAR
+=========================================*/
+
+@media (max-width:768px){
+
+    .senales-grid{
+
+        display:grid !important;
+
+        grid-template-columns:1fr !important;
+
+        gap:20px !important;
+
+    }
+
+    .tarjeta-senal{
+
+        display:block !important;
+
+        width:100% !important;
+
+        background:#ffffff !important;
+
+        border-radius:18px !important;
+
+        border:1px solid rgba(13,110,253,.10) !important;
+
+        box-shadow:0 8px 22px rgba(0,0,0,.10) !important;
+
+        padding:24px !important;
+
+        margin:0 auto !important;
+
+    }
+
+}
