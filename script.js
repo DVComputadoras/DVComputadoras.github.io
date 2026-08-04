@@ -276,3 +276,43 @@ animatedElements.forEach(element=>{
 
 
 });
+/*==================================================
+V11 - ANIMACIÓN SEÑALES DE MANTENIMIENTO
+==================================================*/
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const tarjetas = document.querySelectorAll(".tarjeta-senal");
+
+    if (!tarjetas.length) return;
+
+    tarjetas.forEach((tarjeta) => {
+
+        tarjeta.style.opacity = "0";
+        tarjeta.style.transform = "translateY(40px)";
+        tarjeta.style.transition = "opacity .7s ease, transform .7s ease";
+
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+
+        entries.forEach((entry) => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+
+                observer.unobserve(entry.target);
+
+            }
+
+        });
+
+    }, {
+        threshold: 0.15
+    });
+
+    tarjetas.forEach((tarjeta) => observer.observe(tarjeta));
+
+});
