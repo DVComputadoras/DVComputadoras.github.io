@@ -1995,6 +1995,115 @@ PANTALLAS PEQUEÑAS
     }
 
 }
+/*==================================================
+V11 - SEÑALES DE MANTENIMIENTO
+==================================================*/
+
+.senales-mantenimiento{
+
+    padding:90px 0;
+
+    background:linear-gradient(180deg,#ffffff 0%,#f6f9fc 100%);
+
+}
+
+.senales-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+    margin-top:50px;
+
+}
+
+.tarjeta-senal{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:30px 25px;
+
+    text-align:center;
+
+    border:1px solid rgba(13,110,253,.10);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.35s ease;
+
+}
+
+.tarjeta-senal:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 35px rgba(0,0,0,.15);
+
+}
+
+.tarjeta-senal i{
+
+    font-size:42px;
+
+    color:#0d6efd;
+
+    margin-bottom:18px;
+
+}
+
+.tarjeta-senal h3{
+
+    font-size:1.15rem;
+
+    color:#1d3557;
+
+    margin-bottom:12px;
+
+}
+
+.tarjeta-senal p{
+
+    color:#666;
+
+    line-height:1.7;
+
+}
+
+/* TABLET */
+
+@media(max-width:992px){
+
+    .senales-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+/* CELULAR */
+
+@media(max-width:768px){
+
+    .senales-grid{
+
+        grid-template-columns:1fr;
+
+        gap:18px;
+
+    }
+
+    .tarjeta-senal{
+
+        padding:24px 20px;
+
+    }
+
+}
 /*=========================================
 TÍTULO - SEÑALES DE MANTENIMIENTO
 =========================================*/
@@ -2056,42 +2165,5 @@ TÍTULO - SEÑALES DE MANTENIMIENTO
     color:#666;
 
     max-width:650px;
-
-}
-/*=========================================
-CORRECCIÓN V11 - TARJETAS EN CELULAR
-=========================================*/
-
-@media (max-width:768px){
-
-    .senales-grid{
-
-        display:grid !important;
-
-        grid-template-columns:1fr !important;
-
-        gap:20px !important;
-
-    }
-
-    .tarjeta-senal{
-
-        display:block !important;
-
-        width:100% !important;
-
-        background:#ffffff !important;
-
-        border-radius:18px !important;
-
-        border:1px solid rgba(13,110,253,.10) !important;
-
-        box-shadow:0 8px 22px rgba(0,0,0,.10) !important;
-
-        padding:24px !important;
-
-        margin:0 auto !important;
-
-    }
 
 }
