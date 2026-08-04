@@ -403,6 +403,8 @@ header{
 
     justify-content:space-between;
 
+    overflow:hidden;
+
 }
 
 /*==================================================
@@ -411,9 +413,11 @@ LOGO
 
 .logo img{
 
-    width:150px;
+    width:120px;
 
-    height:auto;
+    height:60px;
+
+    object-fit:contain;
 
     transition:var(--transition);
 
@@ -1723,11 +1727,15 @@ MÓVILES
     }
 
 
-    .logo img{
+   .logo img{
 
-        width:125px;
+    width:110px;
 
-    }
+    height:55px;
+
+    object-fit:contain;
+
+}
 
 
     nav{
