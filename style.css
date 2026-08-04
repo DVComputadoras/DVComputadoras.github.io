@@ -1995,3 +1995,178 @@ PANTALLAS PEQUEÑAS
     }
 
 }
+/*==================================================
+V11 - SEÑALES DE MANTENIMIENTO
+==================================================*/
+
+.senales-mantenimiento{
+
+    padding:90px 0;
+
+    background:linear-gradient(180deg,#ffffff 0%,#f6f9fc 100%);
+
+}
+
+.senales-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+    margin-top:55px;
+
+}
+
+.tarjeta-senal{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:30px 25px;
+
+    text-align:center;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+    border:1px solid rgba(0,123,255,.08);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.tarjeta-senal::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:linear-gradient(90deg,#0d6efd,#00b4ff);
+
+}
+
+.tarjeta-senal:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.14);
+
+}
+
+.tarjeta-senal i{
+
+    font-size:46px;
+
+    color:#0d6efd;
+
+    margin-bottom:18px;
+
+    transition:.35s;
+
+}
+
+.tarjeta-senal:hover i{
+
+    transform:scale(1.15) rotate(5deg);
+
+}
+
+.tarjeta-senal h3{
+
+    font-size:1.15rem;
+
+    font-weight:700;
+
+    margin-bottom:12px;
+
+    color:#1d3557;
+
+    line-height:1.35;
+
+}
+
+.tarjeta-senal p{
+
+    color:#666;
+
+    line-height:1.7;
+
+    font-size:.95rem;
+
+}
+
+/*==========================
+TABLET
+==========================*/
+
+@media(max-width:992px){
+
+.senales-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+/*==========================
+CELULAR
+==========================*/
+
+@media(max-width:768px){
+
+.senales-mantenimiento{
+
+padding:70px 0;
+
+}
+
+.senales-grid{
+
+grid-template-columns:1fr;
+
+gap:18px;
+
+margin-top:35px;
+
+}
+
+.tarjeta-senal{
+
+padding:24px;
+
+}
+
+.tarjeta-senal i{
+
+font-size:38px;
+
+}
+
+.tarjeta-senal h3{
+
+font-size:1.05rem;
+
+}
+
+.tarjeta-senal p{
+
+font-size:.92rem;
+
+}
+
+}
