@@ -1,42 +1,79 @@
 /*==================================================
-DV COMPUTADORAS V10 PRO
+DV COMPUTADORAS V11
 SCRIPT.JS
 ==================================================*/
 
 
-//======================================
-// MENÚ MÓVIL
-//======================================
+/*==================================================
+PRELOADER
+==================================================*/
 
-const btnMenu = document.querySelector(".btn-menu");
+window.addEventListener("load",()=>{
 
-const menu = document.querySelector(".menu");
+    const preloader = document.getElementById("preloader");
+
+    if(preloader){
+
+        setTimeout(()=>{
+
+            preloader.style.opacity="0";
+
+            preloader.style.visibility="hidden";
+
+        },500);
+
+    }
+
+});
 
 
-if(btnMenu){
 
-    btnMenu.addEventListener("click",()=>{
+/*==================================================
+MENU MOBILE
+==================================================*/
+
+const menuToggle = document.querySelector(".menu-toggle");
+
+const menu = document.querySelector("nav");
+
+
+if(menuToggle && menu){
+
+
+    menuToggle.addEventListener("click",()=>{
+
 
         menu.classList.toggle("active");
 
+
+        menuToggle.classList.toggle("open");
+
+
     });
+
 
 }
 
 
 
-// Cerrar menú al seleccionar una opción
+/*==================================================
+CERRAR MENU AL HACER CLICK
+==================================================*/
 
-const enlacesMenu = document.querySelectorAll(".menu a");
-
-
-enlacesMenu.forEach(enlace=>{
-
-
-    enlace.addEventListener("click",()=>{
+const menuLinks = document.querySelectorAll("nav a");
 
 
-        menu.classList.remove("active");
+menuLinks.forEach(link=>{
+
+
+    link.addEventListener("click",()=>{
+
+
+        if(menu){
+
+            menu.classList.remove("active");
+
+        }
 
 
     });
@@ -46,13 +83,11 @@ enlacesMenu.forEach(enlace=>{
 
 
 
+/*==================================================
+BOTÓN SUBIR ARRIBA
+==================================================*/
 
-//======================================
-// BOTÓN SUBIR ARRIBA
-//======================================
-
-
-const btnTop = document.getElementById("btnTop");
+const btnTop = document.getElementById("btn-top");
 
 
 window.addEventListener("scroll",()=>{
@@ -61,13 +96,13 @@ window.addEventListener("scroll",()=>{
     if(window.scrollY > 400){
 
 
-        btnTop.style.display="flex";
+        btnTop?.classList.add("show");
 
 
     }else{
 
 
-        btnTop.style.display="none";
+        btnTop?.classList.remove("show");
 
 
     }
@@ -96,288 +131,148 @@ if(btnTop){
 
 
 }
+
+
+
 /*==================================================
 CONTADORES ANIMADOS
 ==================================================*/
 
-
-const contadores = document.querySelectorAll(".numero");
-
-
-let iniciado = false;
+const counters = document.querySelectorAll(".counter");
 
 
-
-function iniciarContadores(){
-
-
-    contadores.forEach(contador=>{
-
-
-        const objetivo = parseInt(contador.dataset.numero);
-
-
-        let actual = 0;
-
-
-        const incremento = Math.ceil(objetivo / 100);
+let started = false;
 
 
 
-        const animacion = setInterval(()=>{
+function startCounters(){
 
 
-            actual += incremento;
+    if(started) return;
 
 
-            if(actual >= objetivo){
+    const section = document.querySelector(".counter-section");
 
 
-                contador.textContent = objetivo + "+";
-
-
-                clearInterval(animacion);
-
-
-            }else{
-
-
-                contador.textContent = actual + "+";
-
-
-            }
+    if(!section) return;
 
 
 
-        },20);
+    const position = section.getBoundingClientRect().top;
 
 
 
-    });
+    if(position < window.innerHeight - 100){
 
 
-}
+        started=true;
 
 
 
-
-window.addEventListener("scroll",()=>{
-
-
-    const seccionEstadistica = document.querySelector(".estadisticas");
+        counters.forEach(counter=>{
 
 
-    if(seccionEstadistica){
+            const target = +counter.dataset.target;
 
 
-        const posicion = seccionEstadistica.getBoundingClientRect().top;
+            let current = 0;
 
 
-        if(posicion < window.innerHeight - 100 && !iniciado){
+            const increment = target / 100;
 
 
-            iniciarContadores();
+
+            const updateCounter = ()=>{
 
 
-            iniciado=true;
+                current += increment;
 
 
-        }
+
+                if(current < target){
+
+
+                    counter.textContent = Math.ceil(current);
+
+
+                    requestAnimationFrame(updateCounter);
+
+
+                }else{
+
+
+                    counter.textContent = target;
+
+
+                }
+
+
+            };
+
+
+            updateCounter();
+
+
+
+        });
+
 
 
     }
 
 
-});
+
+}
 
 
 
+window.addEventListener("scroll",startCounters);
 
 
 
 /*==================================================
-ANIMACIÓN ELEMENTOS AL SCROLL
+ANIMACIÓN AL HACER SCROLL
 ==================================================*/
 
 
-const elementosAnimar = document.querySelectorAll(
-".servicio-card, .paso, .foto, .testimonio, .faq-item, .dato"
+const animatedElements = document.querySelectorAll(
+
+    ".service-card, .why-card, .process-card, .gallery-item, .contact-card"
+
 );
 
 
 
-const observador = new IntersectionObserver((elementos)=>{
+const observer = new IntersectionObserver((entries)=>{
 
 
-    elementos.forEach(elemento=>{
+    entries.forEach(entry=>{
 
 
-        if(elemento.isIntersecting){
+        if(entry.isIntersecting){
 
 
-            elemento.target.classList.add("mostrar");
+            entry.target.classList.add("show");
 
 
         }
 
 
     });
-
 
 
 },{
 
-
-    threshold:0.15
-
+    threshold:.15
 
 });
 
 
 
-elementosAnimar.forEach(elemento=>{
+animatedElements.forEach(element=>{
 
 
-    elemento.classList.add("oculto");
-
-
-    observador.observe(elemento);
-
-
-});
-/* ANIMACIONES JAVASCRIPT */
-
-.oculto{
-
-    opacity:0;
-
-    transform:translateY(40px);
-
-}
-
-
-
-.mostrar{
-
-    opacity:1;
-
-    transform:translateY(0);
-
-    transition:.8s ease;
-
-}
-/*==================================================
-VALIDACIÓN DE FORMULARIO
-==================================================*/
-
-
-const formulario = document.querySelector(".formulario form");
-
-
-if(formulario){
-
-
-    formulario.addEventListener("submit",(e)=>{
-
-
-        e.preventDefault();
-
-
-
-        const nombre = formulario.querySelector(
-        'input[placeholder="Nombre"]'
-        ).value;
-
-
-
-        const mensaje = formulario.querySelector(
-        "textarea"
-        ).value;
-
-
-
-        if(nombre === "" || mensaje === ""){
-
-
-            alert(
-            "Por favor completa los campos requeridos."
-            );
-
-
-            return;
-
-
-        }
-
-
-
-        alert(
-        "Gracias " + nombre +
-        ". Tu mensaje fue preparado correctamente."
-        );
-
-
-
-        formulario.reset();
-
-
-
-    });
-
-
-
-}
-
-
-
-
-
-/*==================================================
-AÑO AUTOMÁTICO FOOTER
-==================================================*/
-
-
-const fecha = new Date();
-
-const año = fecha.getFullYear();
-
-
-const copyright = document.querySelector(".footer-copy");
-
-
-if(copyright){
-
-
-    copyright.innerHTML =
-    "© " + año +
-    " DV Computadoras | Todos los derechos reservados.";
-
-
-}
-
-
-
-
-
-
-/*==================================================
-CARGA SUAVE DE IMÁGENES
-==================================================*/
-
-
-const imagenes = document.querySelectorAll("img");
-
-
-imagenes.forEach(imagen=>{
-
-
-    imagen.addEventListener("load",()=>{
-
-
-        imagen.classList.add("cargada");
-
-
-    });
+    observer.observe(element);
 
 
 });
