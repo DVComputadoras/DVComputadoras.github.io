@@ -1428,6 +1428,11 @@ CELULAR
 
 @media(max-width:768px){
 
+    .logo img {
+        width: 140px;      /* <--- Cambia este valor para subir o bajar el tamaño */
+        max-width: 100%;   /* Evita que se salga del contenedor */
+        height: auto;      /* Mantiene la proporción sin deformar la imagen */
+    }
 
     .maintenance-box{
 
