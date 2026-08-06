@@ -1434,7 +1434,7 @@ CELULAR
     .logo img, 
     header img, 
     .nav-logo img {
-        width: 80px !important;       /* Cambia este valor a tu gusto (ej. 70px, 80px, 90px) */
+        width: 90px !important;       /* Cambia este valor a tu gusto (ej. 70px, 80px, 90px) */
         max-width: none !important; 
         height: auto !important;
         max-height: none !important;
@@ -1445,7 +1445,7 @@ CELULAR
     .header, 
     .navbar {
         height: auto !important;
-        min-height: 70px;             /* Ajusta según el alto que quieras para la barra */
+        min-height: 90px;             /* Ajusta según el alto que quieras para la barra */
         padding-top: 10px;
         padding-bottom: 10px;
     }
