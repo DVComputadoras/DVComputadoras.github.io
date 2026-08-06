@@ -1428,11 +1428,39 @@ CELULAR
 
 @media(max-width:768px){
 
-    .logo img {
-        width: 140px;      /* <--- Cambia este valor para subir o bajar el tamaño */
-        max-width: 100%;   /* Evita que se salga del contenedor */
-        height: auto;      /* Mantiene la proporción sin deformar la imagen */
+    @media(max-width:768px){
+
+    /* Forzar que el logo crezca ignorando restricciones previas */
+    .logo img, 
+    header img, 
+    .nav-logo img {
+        width: 80px !important;       /* Cambia este valor a tu gusto (ej. 70px, 80px, 90px) */
+        max-width: none !important; 
+        height: auto !important;
+        max-height: none !important;
     }
+
+    /* Forzar que la barra del encabezado le dé espacio vertical para crecer */
+    header, 
+    .header, 
+    .navbar {
+        height: auto !important;
+        min-height: 70px;             /* Ajusta según el alto que quieras para la barra */
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .maintenance-box{
+        flex-direction:column;
+        text-align:center;
+        padding:35px 25px;
+    }
+
+    .maintenance-content h2{
+        font-size:1.55rem;
+    }
+
+}
 
     .maintenance-box{
 
